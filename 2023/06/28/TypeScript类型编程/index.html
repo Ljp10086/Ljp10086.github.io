@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="keywords" content="Hexo Theme Keep">
     <meta name="description" content="Hexo Theme Keep">
-    <meta name="author" content="Keep Team">
+    <meta name="author" content="Ljp">
     
     <title>
         
             TypeScript类型编程 |
         
-        Keep Theme
+        Ljp&#39;s Blog
     </title>
     
 <link rel="stylesheet" href="/css/style.css">
 
-    <link rel="shortcut icon" href="/images/logo.svg">
+    <link rel="shortcut icon" href="/images/favicon.ico">
     
 <link rel="stylesheet" href="/font/css/fontawesome.min.css">
 
@@ -32,7 +32,7 @@
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {}
     KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"en"}
-    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066cc","logo":"/images/logo.svg","favicon":"/images/logo.svg","avatar":"/images/avatar.svg","font_size":null,"font_family":null,"hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":false,"wordcount":false,"min2read":false},"img_align":"left","copyright_info":false},"version":"3.6.1"}
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true},"style":{"primary_color":"#0066cc","logo":"/images/logo.png","favicon":"/images/favicon.ico","avatar":"/images/logo.png","font_size":null,"font_family":null,"hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"header_transparent":true,"background_img":"/images/bg.svg","description":"行胜于言，实践成真","font_color":null,"hitokoto":true},"scroll":{"progress_bar":true,"percent":true}},"local_search":{"enable":true,"preload":true},"code_copy":{},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":true},"lazyload":{"enable":true},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":true,"wordcount":true,"min2read":true},"img_align":"left","copyright_info":true},"version":"3.6.1"}
     KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
     KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
     KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original article title","author":"Original article author","link":"Original article link"}
@@ -43,7 +43,12 @@
 <body>
 <div class="progress-bar-container">
     
+        <span class="scroll-progress-bar"></span>
+    
 
+    
+        <span class="pjax-progress-bar"></span>
+        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
     
 </div>
 
@@ -62,11 +67,11 @@
         <div class="left">
             
                 <a class="logo-image" href="/">
-                    <img src="/images/logo.svg">
+                    <img src="/images/logo.png">
                 </a>
             
             <a class="logo-title" href="/">
-               Keep Theme
+               Ljp&#39;s Blog
             </a>
         </div>
 
@@ -90,10 +95,40 @@
                             </a>
                         </li>
                     
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                TAGS
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                CATEGORIES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                ABOUT
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
                     
                 </ul>
             </div>
             <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
                 
                 <div class="icon-item menu-bar">
                     <div class="menu-bar-middle"></div>
@@ -113,6 +148,21 @@
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">TAGS</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">CATEGORIES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">ABOUT</a>
                 </li>
             
         </ul>
@@ -141,11 +191,11 @@
             
                 <div class="article-header">
                     <div class="avatar">
-                        <img src="/images/avatar.svg">
+                        <img src="/images/logo.png">
                     </div>
                     <div class="info">
                         <div class="author">
-                            <span class="name">Keep Team</span>
+                            <span class="name">Ljp</span>
                             
                                 <span class="author-label">Lv1</span>
                             
@@ -157,13 +207,13 @@
         
             <i class="fa-regular fa-calendar-plus"></i>&nbsp;
         
-        <span class="pc">2023-06-28 03:16:07</span>
-        <span class="mobile">2023-06-28 03:16</span>
+        <span class="pc">2023-06-28 15:52:40</span>
+        <span class="mobile">2023-06-28 15:52</span>
     </span>
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2023-06-28 03:16:07</span>
+        <span class="pc">2023-06-28 15:52:40</span>
     </span>
     
     
@@ -172,6 +222,10 @@
     
     
     
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
     
 </div>
 
@@ -209,7 +263,12 @@
 <p>那如果是一个返回对象某个属性值的函数，类型该怎么写呢？</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function getPropValue(obj: T, key: string) &#123;</span><br><span class="line">    return obj[key];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const res = getPropValue(&#123;a: 1, b: 2&#125;, &#x27;a&#x27;);</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://pan.udolphin.com/files/image/2022/3/812c6e73b37924038d7515279133b741.png" alt="泛型"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pan.udolphin.com/files/image/2022/3/812c6e73b37924038d7515279133b741.png"
+                      alt="泛型"
+                ></p>
 <p>我们可以看到类型返回值为<code>any</code>。</p>
 <p>好像拿到了<code>T</code>也拿不到它的属性值与属性值，如果我们可以对类型参数<code>T</code>做一些处理就好了。</p>
 <p>所以，有了第三种类型系统。</p>
@@ -219,7 +278,12 @@
 <p>比如上面那个 getProps 的函数，类型可以这样写：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function getPropValue&lt;T extends object, Key extends keyof T&gt;(</span><br><span class="line">  obj: T, key: Key): T[Key] &#123;</span><br><span class="line">    return obj[key];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const res1 = getPropValue(&#123;a: 1, b: 2&#125;, &#x27;a&#x27;);</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://pan.udolphin.com/files/image/2022/3/d326adb00540b1e26c7f6d4bc7cc035f.png" alt="类型编程"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pan.udolphin.com/files/image/2022/3/d326adb00540b1e26c7f6d4bc7cc035f.png"
+                      alt="类型编程"
+                ></p>
 <p>这里我们成功地拿到了返回值的类型！</p>
 <p>这里的 <code>keyof T</code>、<code>T[Key]</code> 就是对类型参数 <code>T</code> 的类型运算。</p>
 <p>TypeScript 的类型系统就是第三种，支持对类型参数做各种逻辑处理，可以写很复杂的类型逻辑。</p>
@@ -227,7 +291,12 @@
 <p>类型逻辑是对类型参数的各种处理，可以实现很多强大的功能。</p>
 </blockquote>
 <p>比如这个 <code>ParseQueryString</code> 的类型：</p>
-<p><img src="https://pan.udolphin.com/files/image/2022/3/04f6d4a9ae4181d2b6a995fa52a50d86.png" alt="ParseQueryString"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pan.udolphin.com/files/image/2022/3/04f6d4a9ae4181d2b6a995fa52a50d86.png"
+                      alt="ParseQueryString"
+                ></p>
 <p>它可以对传入的字符串的类型参数做解析，返回解析以后的结果。</p>
 <p>如果是一些只支持泛型的类型系统是不能做到这一点的。但是 TypeScript 的类型系统就可以，因为它可以对泛型（类型参数）做各种逻辑处理。</p>
 <p>只不过，这个类型的类型逻辑的代码比较多：</p>
@@ -273,8 +342,18 @@
 <h3 id="TypeScript-类型系统中的类型运算"><a href="#TypeScript-类型系统中的类型运算" class="headerlink" title="TypeScript 类型系统中的类型运算"></a>TypeScript 类型系统中的类型运算</h3><h4 id="条件类型-extends"><a href="#条件类型-extends" class="headerlink" title="条件类型: extends ?"></a>条件类型: extends ?</h4><p>条件类型语法类似与JS的三元表达式：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">type res = 1 extends 2 ? true : false;</span><br><span class="line"></span><br><span class="line">type isTwo = T extends 2 ? true: false;</span><br><span class="line"></span><br><span class="line">type res1 = isTwo&lt;1&gt;;</span><br><span class="line">type res2 = isTwo&lt;2&gt;;</span><br></pre></td></tr></table></figure>
 
-<p>结果<br><img src="https://pan.udolphin.com/files/image/2022/3/f6112e41cf5d8e260602b38983bd1e39.png" alt="res1"></p>
-<p><img src="https://pan.udolphin.com/files/image/2022/3/48e12f4c2457eac834cb66f14dd020a4.png" alt="res2"></p>
+<p>结果<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pan.udolphin.com/files/image/2022/3/f6112e41cf5d8e260602b38983bd1e39.png"
+                      alt="res1"
+                ></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pan.udolphin.com/files/image/2022/3/48e12f4c2457eac834cb66f14dd020a4.png"
+                      alt="res2"
+                ></p>
 <p>这种类型也叫<strong>高级类型</strong></p>
 <p><strong>高级类型的特点是传入类型参数，经过运算之后返回一个新的类型。</strong></p>
 <h4 id="推导类型-infer"><a href="#推导类型-infer" class="headerlink" title="推导类型: infer"></a>推导类型: infer</h4><p>推导类型的关键字为<code>infer</code>，作用类似与是声明一个局部变量，获取类型的某一部分。</p>
@@ -282,7 +361,12 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">type First = Tuple extends [infer T, ...unknown[]] ? T : never;</span><br><span class="line"></span><br><span class="line">type res = First&lt;[1, 2, 3]&gt;;</span><br></pre></td></tr></table></figure>
 
 <p><code>res</code>类型为：</p>
-<p><img src="https://pan.udolphin.com/files/image/2022/3/ecfffc0ee17d1553ba16d5682ab17f15.png" alt="infer"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pan.udolphin.com/files/image/2022/3/ecfffc0ee17d1553ba16d5682ab17f15.png"
+                      alt="infer"
+                ></p>
 <p><strong>注意</strong>：这里的在等式左边有一个<code>Tuple extends unknown[]</code>这里的<code>extends</code>关键字并不是条件类型，条件类型是：<code>extends ? :</code>，这里的意思是约束类型参数（泛型）只能是数组类型。</p>
 <p>PS：因为不知道数组元素的具体类型，所以使用<code>unknown</code>。</p>
 <h4 id="联合类型"><a href="#联合类型" class="headerlink" title="联合类型: |"></a>联合类型: |</h4><p>联合类型（Union）类似 js 里的或运算符 |，但是作用于类型，代表类型可以是几个类型之一。</p>
@@ -291,9 +375,19 @@
 <h4 id="交叉类型-amp"><a href="#交叉类型-amp" class="headerlink" title="交叉类型: &amp;"></a>交叉类型: &amp;</h4><p>交叉类型（Intersection）类似 js 中的与运算符 <code>&amp;</code>，但是作用于类型，代表对类型做合并。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">type ObjType = &#123;a: number &#125; &amp; &#123;c: boolean&#125;;</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://pan.udolphin.com/files/image/2022/3/89f6be00f2c47b5dd832ae4e575e553a.png" alt="交叉"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pan.udolphin.com/files/image/2022/3/89f6be00f2c47b5dd832ae4e575e553a.png"
+                      alt="交叉"
+                ></p>
 <p><strong>注意</strong>：同一类型可以合并，不同的类型没法合并，会被舍弃：</p>
-<p><img src="https://pan.udolphin.com/files/image/2022/3/0c85490c2febbe40b38ba0787c94bb10.png" alt="舍弃"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pan.udolphin.com/files/image/2022/3/0c85490c2febbe40b38ba0787c94bb10.png"
+                      alt="舍弃"
+                ></p>
 <h4 id="映射类型"><a href="#映射类型" class="headerlink" title="映射类型"></a>映射类型</h4><p>对象、class在TypeScript对应的类型是索引类型，那么如何对索引类型修改呢？</p>
 <p>答案就是<strong>映射类型</strong>。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">type MapType = &#123;</span><br><span class="line">  [Key in keyof T]?: T[Key]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -307,12 +401,22 @@
 <p>比如我们把一个索引类型的值变成一个字符串：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">type MapType = &#123;</span><br><span class="line">    [Key in keyof T]: &#x27;hello world&#x27;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">type res = MapType&lt;&#123;a: 1, b: 2&#125;&gt;;</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://pan.udolphin.com/files/image/2022/3/045b8f1b097111d73ed4b9b20956ac3d.png"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pan.udolphin.com/files/image/2022/3/045b8f1b097111d73ed4b9b20956ac3d.png"
+                     
+                ></p>
 <p>映射类型就相当于把一个集合映射到另一个集合，这是它名字的由来。</p>
 <p>除了值可以变化，索引也可以变化：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">type MapType = &#123;</span><br><span class="line">    [</span><br><span class="line">        Key in keyof T </span><br><span class="line">            as `$&#123;Key &amp; string&#125; qq`</span><br><span class="line">    ]: T[Key]</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">type res = MapType&lt;&#123;&#x27;1&#x27;: 1, &#x27;2&#x27;: 2&#125;&gt;;</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://pan.udolphin.com/files/image/2022/3/3798e7d84077cae3f548ff8c53914eb4.png" alt="索引映射"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pan.udolphin.com/files/image/2022/3/3798e7d84077cae3f548ff8c53914eb4.png"
+                      alt="索引映射"
+                ></p>
 <p>我们用 as 把索引也做了修改，改成了原本的Key后加一个‘ qq’</p>
 <h4 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h4><p>给 JavaScript 添加静态类型系统，那肯定是能复用的就复用，所以在 TypeScript 里，基础类型和 class、Array 等复合类型都是和 JavaScript 一样的，只是又额外加了接口（interface）、枚举（enum）、元组这三种复合类型（对象类型、class 类型在 TypeScript 里叫做索引类型），还有 void、never、any、unkown 四种特殊类型，以及支持字面量做为类型。此外，TypeScript 类型系统也支持通过 readonly、？等修饰符对属性的特性做进一步的描述。</p>
 <p>此外，TypeScript 支持对类型做运算，这是它的类型系统的强大之处，也是复杂之处。</p>
@@ -333,26 +437,46 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">type GetValueType = P extends Promise ? Value : never;</span><br></pre></td></tr></table></figure>
 
 <p>通过 extends 对传入的类型参数 P 做模式匹配，其中值的类型是需要提取的，通过 infer 声明一个局部变量 Value 来保存，如果匹配，就返回匹配到的 Value，否则就返回 never 代表没匹配到。</p>
-<p><img src="https://pan.udolphin.com/files/image/2022/3/a7e2782c61ff0db18c9782f034f9c1ee.png" alt="GetValueType"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pan.udolphin.com/files/image/2022/3/a7e2782c61ff0db18c9782f034f9c1ee.png"
+                      alt="GetValueType"
+                ></p>
 <p>这就是 Typescript 类型的模式匹配：</p>
 <p>Typescript 类型的模式匹配是通过 extends 对类型参数做匹配，结果保存到通过 infer 声明的局部类型变量里，如果匹配就能从该局部变量里拿到提取出的类型。</p>
 <p>这个模式匹配的套路有多有用呢？我们来看下在数组、函数等类型里的应用。</p>
 <h4 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h4><h5 id="Last"><a href="#Last" class="headerlink" title="Last"></a>Last</h5><p>前几章我们介绍了获取数组第一个元素的First，既然可以提取第一个元素，当然也可以提取最后一个元素，修改下模式类型就行：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">type arr = [1,2,3]</span><br><span class="line"></span><br><span class="line">type Last = T extends [...unknown[], infer U] ? U : never;</span><br><span class="line"></span><br><span class="line">type Ans = Last;</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://pan.udolphin.com/files/image/2022/3/b41afc9496f5ec4ab3883fec1db4f417.png" alt="last"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pan.udolphin.com/files/image/2022/3/b41afc9496f5ec4ab3883fec1db4f417.png"
+                      alt="last"
+                ></p>
 <h4 id="函数-1"><a href="#函数-1" class="headerlink" title="函数"></a>函数</h4><h5 id="GetParameters"><a href="#GetParameters" class="headerlink" title="GetParameters"></a>GetParameters</h5><p>类型参数 Func 是要匹配的函数类型，通过 extends 约束为 Function。</p>
 <p>Func 和模式类型做匹配，参数类型放到用 infer 声明的局部变量 T 里，返回值可以是任何类型。</p>
 <p>返回提取到的参数类型 AnsFunc</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">type GetParameters = Func extends (...args: infer T)=&gt; any ? T : never;</span><br><span class="line"></span><br><span class="line">type AnsFunc = GetParameters&lt;(a: number, b: string) =&gt; void&gt;; </span><br></pre></td></tr></table></figure>
 
-<p><img src="https://pan.udolphin.com/files/image/2022/3/34a53710fce426f65b34ff359dc011c5.png" alt="GetParameters"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pan.udolphin.com/files/image/2022/3/34a53710fce426f65b34ff359dc011c5.png"
+                      alt="GetParameters"
+                ></p>
 <h5 id="GetReturnType"><a href="#GetReturnType" class="headerlink" title="GetReturnType"></a>GetReturnType</h5><p>能提取参数类型，同样也可以提取返回值类型：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">type GetReturnType = </span><br><span class="line">    Func extends (...args: any[]) =&gt; infer ReturnType </span><br><span class="line">        ? ReturnType : never;</span><br><span class="line"></span><br><span class="line">type AnsRT = GetReturnType&lt;(a: number, b: string) =&gt; number | string&gt;;</span><br></pre></td></tr></table></figure>
 
 <p><code>Func</code> 和模式类型做匹配，提取返回值到通过 <code>infer</code> 声明的局部变量 <code>ReturnType</code> 里返回。</p>
 <p>参数类型可以是任意类型，也就是 <code>any[]</code>（注意，这里不能用 <code>unknown</code>，因为参数类型是要赋值给别的类型的，而 <code>unknown</code> 只能用来接收类型，所以用 <code>any</code>）。</p>
-<p><img src="https://pan.udolphin.com/files/image/2022/3/e3852b2be702cd445dee61395579f6cf.png" alt="GetReturnType"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pan.udolphin.com/files/image/2022/3/e3852b2be702cd445dee61395579f6cf.png"
+                      alt="GetReturnType"
+                ></p>
 <h3 id="重新构造"><a href="#重新构造" class="headerlink" title="重新构造"></a>重新构造</h3><p>类型编程主要的目的就是对类型做各种转换，那么如何对类型做修改呢？</p>
 <p><code>TypeScript</code> 类型系统支持 3 种可以声明任意类型的变量： type、infer、类型参数。</p>
 <p>type 叫做类型别名，其实就是声明一个变量存储某个类型：</p>
@@ -377,7 +501,12 @@
 <p>类型参数 <code>Arr</code> 是要修改的数组&#x2F;元组类型，元素的类型任意，也就是 <code>unknown</code>。</p>
 <p>类型参数 <code>Ele</code> 是添加的元素的类型。</p>
 <p>返回的是用 <code>Arr</code> 已有的元素加上 <code>Ele</code> 构造的新的元组类型。</p>
-<p><img src="https://pan.udolphin.com/files/image/2022/3/9846d9e49553d5e3a310dd45d535f29a.png" alt="Push"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pan.udolphin.com/files/image/2022/3/9846d9e49553d5e3a310dd45d535f29a.png"
+                      alt="Push"
+                ></p>
 <h4 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h4><h5 id="CapitalizeStr"><a href="#CapitalizeStr" class="headerlink" title="CapitalizeStr"></a>CapitalizeStr</h5><p>我们想把一个字符串字面量类型的 <code>&#39;hello&#39;</code> 转为首字母大写的 ‘Hello’。</p>
 <p>需要用到字符串类型的提取和重新构造：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">type CapitalizeStr = </span><br><span class="line">    Str extends `$&#123;infer First&#125;$&#123;infer Rest&#125;` </span><br><span class="line">        ? `$&#123;Uppercase&#125;$&#123;Rest&#125;` : Str;</span><br><span class="line"></span><br><span class="line">type AnsStr = CapitalizeStr&lt;&#x27;hello&#x27;&gt;;</span><br></pre></td></tr></table></figure>
@@ -385,7 +514,12 @@
 <p>我们声明了类型参数 Str 是要处理的字符串类型，通过 extends 约束为 string。</p>
 <p>通过 infer 提取出首个字符到局部变量 First，提取后面的字符到局部变量 Rest。</p>
 <p>然后使用 TypeScript 提供的内置高级类型 Uppercase 把首字母转为大写，加上 Rest，构造成新的字符串类型返回。</p>
-<p><img src="https://pan.udolphin.com/files/image/2022/3/9be59b5f134ab564eca5dd1ff7085c1a.png" alt="CapitalizeStr"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pan.udolphin.com/files/image/2022/3/9be59b5f134ab564eca5dd1ff7085c1a.png"
+                      alt="CapitalizeStr"
+                ></p>
 <h3 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h3><p>TypeScript 类型系统中有些类型比较特殊，比如 any、never、联合类型，比如 class 有 public、protected、private 的属性，比如索引类型有具体的索引和可索引签名，索引还有可选和非可选。。。</p>
 <p>如果给我们一种类型让我们判断是什么类型，应该怎么做呢？</p>
 <h4 id="IsAny"><a href="#IsAny" class="headerlink" title="IsAny"></a>IsAny</h4><p>如何判断一个类型是 <code>any</code> 类型呢？要根据它的特性来：</p>
@@ -394,18 +528,38 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">type IsAny = &#x27;T&#x27; extends (&#x27;S&#x27; &amp; T) ? true : false</span><br></pre></td></tr></table></figure>
 
 <p>这里的 <code>&#39;T&#39;</code> 和 <code>&#39;S&#39;</code> 可以换成任意类型。</p>
-<p>当传入 <code>any</code> 时：<br><img src="https://pan.udolphin.com/files/image/2022/3/892e06644df96bd886d7df8eb09626f6.png"></p>
-<p>当传入其他类型时：<br><img src="https://pan.udolphin.com/files/image/2022/3/a87849bcccfef24c1df38c71bd08c230.png"></p>
+<p>当传入 <code>any</code> 时：<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pan.udolphin.com/files/image/2022/3/892e06644df96bd886d7df8eb09626f6.png"
+                     
+                ></p>
+<p>当传入其他类型时：<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pan.udolphin.com/files/image/2022/3/a87849bcccfef24c1df38c71bd08c230.png"
+                     
+                ></p>
 <h4 id="IsNever"><a href="#IsNever" class="headerlink" title="IsNever"></a>IsNever</h4><p><code>never</code> 在条件类型中也比较特殊，如果条件类型左边是类型参数，并且传入的是 <code>never</code>，那么直接返回 <code>never</code>：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">type TestNever = T extends never ? true : false;</span><br></pre></td></tr></table></figure>
 
 <p>当 <code>T</code> 为 <code>never</code> 时：</p>
-<p><img src="https://pan.udolphin.com/files/image/2022/3/6a385b3980c4a8479eb27b13ab2e3594.png" alt="TestNever"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pan.udolphin.com/files/image/2022/3/6a385b3980c4a8479eb27b13ab2e3594.png"
+                      alt="TestNever"
+                ></p>
 <p>所以，要判断 <code>never</code> 类型，就不能直接 <code>T extends never</code>，可以这样写：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">type IsNever = [T] extends [never] ? true : false</span><br></pre></td></tr></table></figure>
 
 <p>这样就能正常判断 never 类型了：</p>
-<p><img src="https://pan.udolphin.com/files/image/2022/3/5d0eca65dfeba3b9aec33a9932f56235.png" alt="isNever"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pan.udolphin.com/files/image/2022/3/5d0eca65dfeba3b9aec33a9932f56235.png"
+                      alt="isNever"
+                ></p>
 <h4 id="GetOptional"><a href="#GetOptional" class="headerlink" title="GetOptional"></a>GetOptional</h4><p>如何提取索引类型中的可选索引呢？</p>
 <p>这也要利用可选索引的特性：可选索引的值为 <code>undefined</code> 和值类型的联合类型。</p>
 <p>过滤可选索引，就要构造一个新的索引类型，过程中做过滤：</p>
@@ -420,7 +574,12 @@
 <p>因为 <code>a</code> 可能为 <code>undefined</code>，也就是索引类型可能是 <code>&#123;&#125;</code>，所以 <code>&#123;&#125; extends Pick&lt;Obj, Key&gt;</code> 就能过滤出可选索引。（可选的意思就是有或者没有，没有的时候就是空的索引类型）</p>
 <p>值的类型依然是之前的，也就是 <code>Obj[Key]</code>。</p>
 <p>这样，就能过滤出所有可选索引，构造成新的索引类型：</p>
-<p><img src="https://pan.udolphin.com/files/image/2022/3/10d144f3d6719da2705d87250db2e55f.png" alt="GetOptional"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pan.udolphin.com/files/image/2022/3/10d144f3d6719da2705d87250db2e55f.png"
+                      alt="GetOptional"
+                ></p>
 <h2 id="TypeScript内置高级类型"><a href="#TypeScript内置高级类型" class="headerlink" title="TypeScript内置高级类型"></a>TypeScript内置高级类型</h2><h3 id="Parameters"><a href="#Parameters" class="headerlink" title="Parameters"></a>Parameters</h3><p>Parameters 用于提取函数类型的参数类型。</p>
 <p>源码是这样的：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">type Parameters&lt;T extends (...args: any) =&gt; any&gt; = T extends (...args: infer P) =&gt; any ? P : never;</span><br></pre></td></tr></table></figure>
@@ -428,7 +587,12 @@
 <p>类型参数 T 为待处理的类型，通过 extends 约束为函数，参数和返回值任意。</p>
 <p>通过 extends 匹配一个模式类型，提取参数的类型到 infer 声明的局部变量 P 中返回。</p>
 <p>这样就实现了函数参数类型的提取：</p>
-<p><img src="https://pan.udolphin.com/files/image/2022/3/9b8a6a671a491c4734bfb412b9c391d5.png" alt="Parameters"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pan.udolphin.com/files/image/2022/3/9b8a6a671a491c4734bfb412b9c391d5.png"
+                      alt="Parameters"
+                ></p>
 <h3 id="ReturnType"><a href="#ReturnType" class="headerlink" title="ReturnType"></a>ReturnType</h3><p>ReturnType 用于提取函数类型的返回值类型。</p>
 <p>源码是这样的：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">type ReturnType&lt;T extends (...args: any) =&gt; any&gt; = T extends (...args: any) =&gt; infer R ? R : any;</span><br></pre></td></tr></table></figure>
@@ -436,7 +600,12 @@
 <p>类型参数 T 为待处理的类型，通过 extends 约束为函数类型，参数和返回值任意。</p>
 <p>用 T 匹配一个模式类型，提取返回值的类型到 infer 声明的局部变量 R 里返回。</p>
 <p>这样就实现了函数返回值类型的提取：</p>
-<p><img src="https://pan.udolphin.com/files/image/2022/3/4450db68c428e9aad9854fae25d520d9.png" alt="ReturnType"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pan.udolphin.com/files/image/2022/3/4450db68c428e9aad9854fae25d520d9.png"
+                      alt="ReturnType"
+                ></p>
 <h3 id="ConstructorParameters"><a href="#ConstructorParameters" class="headerlink" title="ConstructorParameters"></a>ConstructorParameters</h3><p>构造器类型和函数类型的区别就是可以被 new。</p>
 <p><code>Parameters</code> 用于提取函数参数的类型，而 <code>ConstructorParameters</code> 用于提取构造器参数的类型。</p>
 <p>源码是这样的：</p>
@@ -445,34 +614,81 @@
 <p>类型参数 <code>T</code> 是待处理的类型，通过 <code>extends</code> 约束为构造器类型，加个 <code>abstract</code> 代表不能直接被实例化（其实不加也行）。</p>
 <p>用 <code>T</code> 匹配一个模式类型，提取参数的部分到 <code>infer</code> 声明的局部变量 <code>P</code> 里，返回 <code>P</code>。</p>
 <p>这样就实现了构造器参数类型的提取：</p>
-<p><img src="https://pan.udolphin.com/files/image/2022/3/e933b2381b696b710fa03cb783424fd6.png" alt="ConstructorParameters"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pan.udolphin.com/files/image/2022/3/e933b2381b696b710fa03cb783424fd6.png"
+                      alt="ConstructorParameters"
+                ></p>
 <h3 id="Partial"><a href="#Partial" class="headerlink" title="Partial"></a>Partial</h3><p>索引类型可以通过映射类型的语法做修改，比如把索引变为可选。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">type Partial&lt;T&gt; = &#123;</span><br><span class="line">    [P in keyof T]?: T[P];</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
 <p>类型参数 T 为待处理的类型。</p>
 <p>通过映射类型的语法构造一个新的索引类型返回，索引 P 是来源于之前的 T 类型的索引，也就是 P in keyof T，索引值的类型也是之前的，也就是 T[P]。</p>
 <p>这样就实现了把索引类型的索引变为可选的效果：</p>
-<p><img src="https://pan.udolphin.com/files/image/2022/3/0809d138e65052ce8fc26659f4483094.png" alt="Partial"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pan.udolphin.com/files/image/2022/3/0809d138e65052ce8fc26659f4483094.png"
+                      alt="Partial"
+                ></p>
 <h3 id="Required"><a href="#Required" class="headerlink" title="Required"></a>Required</h3><p>可以把索引变为可选，也同样可以去掉可选，也就是 <code>Required</code> 类型：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">type Required&lt;T&gt; = &#123;</span><br><span class="line">    [P in keyof T]-?: T[P];</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
 <p>类型参数 <code>T</code> 为待处理的类型。</p>
 <p>通过映射类型的语法构造一个新的索引类型，索引取自之前的索引，也就是 <code>P in keyof T</code>，但是要去掉可选，也就是 <code>-?</code>，值的类型也是之前的，就是 T[P]。</p>
 <p>这样就实现了去掉可选修饰的目的：</p>
-<p><img src="https://pan.udolphin.com/files/image/2022/3/cc07e236c4add12a403527a6c3d5e4d3.png" alt="Required"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pan.udolphin.com/files/image/2022/3/cc07e236c4add12a403527a6c3d5e4d3.png"
+                      alt="Required"
+                ></p>
 <h3 id="Readonly"><a href="#Readonly" class="headerlink" title="Readonly"></a>Readonly</h3><p>同样的方式，也可以添加 readonly 的修饰：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">type Readonly&lt;T&gt; = &#123;</span><br><span class="line">    readonly [P in keyof T]: T[P];</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
 <p>类型参数 T 为待处理的类型。</p>
 <p>通过映射类型的语法构造一个新的索引类型返回，索引和值的类型都是之前的，也就是 P in keyof T 和 T[P]，但是要加上 readonly 的修饰。</p>
 <p>这样就实现了加上 readonly 的目的：</p>
-<p><img src="https://pan.udolphin.com/files/image/2022/3/5868eec3a1b22b6bf53808054fe86502.png" alt="Readonly"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pan.udolphin.com/files/image/2022/3/5868eec3a1b22b6bf53808054fe86502.png"
+                      alt="Readonly"
+                ></p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>虽然很多常用的高级类型TS已经内置了，但是从我个人的角度来说并不建议去死记硬背，因为掌握了TS类型编程套路的我们有很多内置类型都是可以自己去很快实现的，我们还是需要将重点放到提高类型运算中说到的Api的使用熟练度上来。</p>
 <p>在这里也给大家推荐一个很好用的练习网站：</p>
 <p><a class="link"   target="_blank" rel="noopener" href="https://github.com/type-challenges/type-challenges/blob/master/README.zh-CN.md" >https://github.com/type-challenges/type-challenges/blob/master/README.zh-CN.md<i class="fas fa-external-link-alt"></i></a></p>
 
             </div>
 
+            
+                <div class="post-copyright-info">
+                    
+<div class="article-copyright-info-container">
+    <ul class="copyright-info-content">
+        <li class="post-title">
+            <span class="type">Post title</span>: <span class="content">TypeScript类型编程</span>
+        </li>
+        <li class="post-author">
+            <span class="type">Post author</span>: <span class="content">Ljp</span>
+        </li>
+        <li class="post-time">
+            <span class="type">Create time</span>: <span class="content">2023-06-28 15:52:40</span>
+        </li>
+        <li class="post-link">
+            <span class="type">Post link</span>: <span class="content">/2023/06/28/TypeScript类型编程/</span>
+        </li>
+        <li class="post-license">
+            <span class="type">Copyright notice</span>: <span class="content">All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.</span>
+        </li>
+    </ul>
+    <div class="copy-copyright-info flex-center tooltip" data-content="Copy copyright info" data-offset-y="-2px">
+        <i class="fa-solid fa-copy"></i>
+    </div>
+</div>
+
+                </div>
             
 
             
@@ -503,6 +719,15 @@
         </div>
 
         
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#TypeScript%E7%9A%84%E7%B1%BB%E5%9E%8B%E7%B3%BB%E7%BB%9F"><span class="nav-number">1.</span> <span class="nav-text">TypeScript的类型系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E7%B1%BB%E5%9E%8B%E7%B3%BB%E7%BB%9F"><span class="nav-number">1.1.</span> <span class="nav-text">简单类型系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%94%AF%E6%8C%81%E6%B3%9B%E5%9E%8B%E7%9A%84%E7%B1%BB%E5%9E%8B%E7%B3%BB%E7%BB%9F"><span class="nav-number">1.2.</span> <span class="nav-text">支持泛型的类型系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%94%AF%E6%8C%81%E7%B1%BB%E5%9E%8B%E7%BC%96%E7%A8%8B%E7%9A%84%E7%B1%BB%E5%9E%8B%E7%B3%BB%E7%BB%9F"><span class="nav-number">1.3.</span> <span class="nav-text">支持类型编程的类型系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B1%BB%E5%9E%8B%E9%80%BB%E8%BE%91%E8%83%BD%E6%9C%89%E5%A4%9A%E5%A4%8D%E6%9D%82%EF%BC%9F"><span class="nav-number">1.4.</span> <span class="nav-text">类型逻辑能有多复杂？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TypeScript%E7%B1%BB%E5%9E%8B%E7%B3%BB%E7%BB%9F%E4%B8%AD%E7%9A%84%E7%B1%BB%E5%9E%8B"><span class="nav-number">2.</span> <span class="nav-text">TypeScript类型系统中的类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%83%E7%BB%84"><span class="nav-number">2.1.</span> <span class="nav-text">元组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A5%E5%8F%A3"><span class="nav-number">2.2.</span> <span class="nav-text">接口</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AF%B9%E8%B1%A1"><span class="nav-number">2.2.1.</span> <span class="nav-text">对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%87%BD%E6%95%B0"><span class="nav-number">2.2.2.</span> <span class="nav-text">函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9E%84%E9%80%A0%E5%99%A8"><span class="nav-number">2.2.3.</span> <span class="nav-text">构造器</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%9A%E4%B8%BE"><span class="nav-number">2.3.</span> <span class="nav-text">枚举</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B1%BB%E5%9E%8B%E7%9A%84%E8%A3%85%E9%A5%B0"><span class="nav-number">2.4.</span> <span class="nav-text">类型的装饰</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TypeScript-%E7%B1%BB%E5%9E%8B%E7%B3%BB%E7%BB%9F%E4%B8%AD%E7%9A%84%E7%B1%BB%E5%9E%8B%E8%BF%90%E7%AE%97"><span class="nav-number">2.5.</span> <span class="nav-text">TypeScript 类型系统中的类型运算</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9D%A1%E4%BB%B6%E7%B1%BB%E5%9E%8B-extends"><span class="nav-number">2.5.1.</span> <span class="nav-text">条件类型: extends ?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8E%A8%E5%AF%BC%E7%B1%BB%E5%9E%8B-infer"><span class="nav-number">2.5.2.</span> <span class="nav-text">推导类型: infer</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%81%94%E5%90%88%E7%B1%BB%E5%9E%8B"><span class="nav-number">2.5.3.</span> <span class="nav-text">联合类型: |</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%A4%E5%8F%89%E7%B1%BB%E5%9E%8B-amp"><span class="nav-number">2.5.4.</span> <span class="nav-text">交叉类型: &amp;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%98%A0%E5%B0%84%E7%B1%BB%E5%9E%8B"><span class="nav-number">2.5.5.</span> <span class="nav-text">映射类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B0%8F%E7%BB%93"><span class="nav-number">2.5.6.</span> <span class="nav-text">小结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%96%E5%86%99%E7%B1%BB%E5%9E%8B%E6%8A%80%E5%B7%A7"><span class="nav-number">3.</span> <span class="nav-text">编写类型技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A8%A1%E5%BC%8F%E5%8C%B9%E9%85%8D"><span class="nav-number">3.1.</span> <span class="nav-text">模式匹配</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E7%BB%84"><span class="nav-number">3.1.1.</span> <span class="nav-text">数组</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Last"><span class="nav-number">3.1.1.1.</span> <span class="nav-text">Last</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%87%BD%E6%95%B0-1"><span class="nav-number">3.1.2.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#GetParameters"><span class="nav-number">3.1.2.1.</span> <span class="nav-text">GetParameters</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#GetReturnType"><span class="nav-number">3.1.2.2.</span> <span class="nav-text">GetReturnType</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%87%8D%E6%96%B0%E6%9E%84%E9%80%A0"><span class="nav-number">3.2.</span> <span class="nav-text">重新构造</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E7%BB%84-1"><span class="nav-number">3.2.1.</span> <span class="nav-text">数组</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Push"><span class="nav-number">3.2.1.1.</span> <span class="nav-text">Push</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-number">3.2.2.</span> <span class="nav-text">字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#CapitalizeStr"><span class="nav-number">3.2.2.1.</span> <span class="nav-text">CapitalizeStr</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%B9%E6%80%A7"><span class="nav-number">3.3.</span> <span class="nav-text">特性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#IsAny"><span class="nav-number">3.3.1.</span> <span class="nav-text">IsAny</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#IsNever"><span class="nav-number">3.3.2.</span> <span class="nav-text">IsNever</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#GetOptional"><span class="nav-number">3.3.3.</span> <span class="nav-text">GetOptional</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TypeScript%E5%86%85%E7%BD%AE%E9%AB%98%E7%BA%A7%E7%B1%BB%E5%9E%8B"><span class="nav-number">4.</span> <span class="nav-text">TypeScript内置高级类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Parameters"><span class="nav-number">4.1.</span> <span class="nav-text">Parameters</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ReturnType"><span class="nav-number">4.2.</span> <span class="nav-text">ReturnType</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ConstructorParameters"><span class="nav-number">4.3.</span> <span class="nav-text">ConstructorParameters</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Partial"><span class="nav-number">4.4.</span> <span class="nav-text">Partial</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Required"><span class="nav-number">4.5.</span> <span class="nav-text">Required</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Readonly"><span class="nav-number">4.6.</span> <span class="nav-text">Readonly</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">5.</span> <span class="nav-text">总结</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        
     </div>
 </div>
 
@@ -524,9 +749,20 @@
             2023
             
                 &nbsp;<i class="fas fa-heart icon-animate"></i>
-                &nbsp;<a href="/">Keep Team</a>
+                &nbsp;<a href="/">Ljp</a>
             
         </div>
+        
+            <script async data-pjax
+                    src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    Visitor Count&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                
+                
+                    Totalview&nbsp;<span id="busuanzi_value_site_pv"></span>
+                
+            </div>
         
         <div class="theme-info info-item">
             Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
@@ -544,6 +780,10 @@
             <div class="post-tools-container">
     <ul class="tools-list">
         <!-- TOC aside toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
         
 
         <!-- go comment -->
@@ -573,10 +813,6 @@
         
 
         
-            <li class="tools-item tool-scroll-to-top flex-center">
-                <i class="fas fa-arrow-up"></i>
-            </li>
-        
 
         <li class="tools-item tool-scroll-to-bottom flex-center">
             <i class="fas fa-arrow-down"></i>
@@ -588,6 +824,11 @@
             <i class="fas fa-cog fa-spin"></i>
         </li>
         
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
     </ul>
 </div>
 
@@ -597,6 +838,35 @@
     <img class="zoom-in-image">
 </div>
 
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
 
     
 
@@ -619,20 +889,74 @@
 
 
 
+    
+<script src="/js/local-search.js"></script>
 
 
 
 
+    
+<script src="/js/code-block.js"></script>
 
-<div class="post-scripts">
+
+
+
+    
+<script src="/js/lazyload.js"></script>
+
+
+
+<div class="post-scripts pjax">
     
         
 <script src="/js/post-helper.js"></script>
 
         
+            
+<script src="/js/libs/anime.min.js"></script>
+
+        
+        
+            
+<script src="/js/toc.js"></script>
+
         
     
 </div>
+
+
+    
+<script src="/js/libs/pjax.min.js"></script>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
 
 
 

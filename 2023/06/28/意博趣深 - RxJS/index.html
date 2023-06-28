@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="keywords" content="Hexo Theme Keep">
     <meta name="description" content="Hexo Theme Keep">
-    <meta name="author" content="Keep Team">
+    <meta name="author" content="Ljp">
     
     <title>
         
             意博趣深 - RxJS |
         
-        Keep Theme
+        Ljp&#39;s Blog
     </title>
     
 <link rel="stylesheet" href="/css/style.css">
 
-    <link rel="shortcut icon" href="/images/logo.svg">
+    <link rel="shortcut icon" href="/images/favicon.ico">
     
 <link rel="stylesheet" href="/font/css/fontawesome.min.css">
 
@@ -32,7 +32,7 @@
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {}
     KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"en"}
-    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066cc","logo":"/images/logo.svg","favicon":"/images/logo.svg","avatar":"/images/avatar.svg","font_size":null,"font_family":null,"hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":false,"wordcount":false,"min2read":false},"img_align":"left","copyright_info":false},"version":"3.6.1"}
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true},"style":{"primary_color":"#0066cc","logo":"/images/logo.png","favicon":"/images/favicon.ico","avatar":"/images/logo.png","font_size":null,"font_family":null,"hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"header_transparent":true,"background_img":"/images/bg.svg","description":"行胜于言，实践成真","font_color":null,"hitokoto":true},"scroll":{"progress_bar":true,"percent":true}},"local_search":{"enable":true,"preload":true},"code_copy":{},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":true},"lazyload":{"enable":true},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":true,"wordcount":true,"min2read":true},"img_align":"left","copyright_info":true},"version":"3.6.1"}
     KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
     KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
     KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original article title","author":"Original article author","link":"Original article link"}
@@ -43,7 +43,12 @@
 <body>
 <div class="progress-bar-container">
     
+        <span class="scroll-progress-bar"></span>
+    
 
+    
+        <span class="pjax-progress-bar"></span>
+        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
     
 </div>
 
@@ -62,11 +67,11 @@
         <div class="left">
             
                 <a class="logo-image" href="/">
-                    <img src="/images/logo.svg">
+                    <img src="/images/logo.png">
                 </a>
             
             <a class="logo-title" href="/">
-               Keep Theme
+               Ljp&#39;s Blog
             </a>
         </div>
 
@@ -90,10 +95,40 @@
                             </a>
                         </li>
                     
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                TAGS
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                CATEGORIES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                ABOUT
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
                     
                 </ul>
             </div>
             <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
                 
                 <div class="icon-item menu-bar">
                     <div class="menu-bar-middle"></div>
@@ -113,6 +148,21 @@
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">TAGS</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">CATEGORIES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">ABOUT</a>
                 </li>
             
         </ul>
@@ -141,11 +191,11 @@
             
                 <div class="article-header">
                     <div class="avatar">
-                        <img src="/images/avatar.svg">
+                        <img src="/images/logo.png">
                     </div>
                     <div class="info">
                         <div class="author">
-                            <span class="name">Keep Team</span>
+                            <span class="name">Ljp</span>
                             
                                 <span class="author-label">Lv1</span>
                             
@@ -157,13 +207,13 @@
         
             <i class="fa-regular fa-calendar-plus"></i>&nbsp;
         
-        <span class="pc">2023-06-28 03:16:07</span>
-        <span class="mobile">2023-06-28 03:16</span>
+        <span class="pc">2023-06-28 15:52:40</span>
+        <span class="mobile">2023-06-28 15:52</span>
     </span>
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2023-06-28 03:16:07</span>
+        <span class="pc">2023-06-28 15:52:40</span>
     </span>
     
     
@@ -172,6 +222,10 @@
     
     
     
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
     
 </div>
 
@@ -219,7 +273,12 @@
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">fromEvent</span>(<span class="variable language_">document</span>, <span class="string">&#x27;click&#x27;</span>)</span><br><span class="line">  .<span class="title function_">pipe</span>(<span class="title function_">take</span>(<span class="number">1</span>))</span><br><span class="line">  .<span class="title function_">subscribe</span>(<span class="variable language_">console</span>.<span class="property">log</span>);</span><br></pre></td></tr></table></figure>
 <p><a class="link"   target="_blank" rel="noopener" href="https://stackblitz.com/edit/rxjs-3ima52?file=index.ts" >stackblitz<i class="fas fa-external-link-alt"></i></a></p>
 <p>大致上能看得出来我们在使用RxJS后，不管是针对DOM Event还是上面列的各种API我们都可以通过RxJS的API来做操作，像是范例中使用的<code>take(n)</code></p>
-<h3 id="RxJS可以用于生产吗？"><a href="#RxJS可以用于生产吗？" class="headerlink" title="RxJS可以用于生产吗？"></a><strong>RxJS可以用于生产吗？</strong></h3><p>RxJS由微软在2012年开源，目前各个语言库由ReactiveX组织维护。RxJS在GitHub上已有25.3K的start，目前最新版本为7.2，并且持续开发维护中。<br><img src="https://pan.udolphin.com/files/image/2021/8/39b483e61e0786e3b32b5538a4919772.png" alt="1344853561-59f30311dfbcc_fix732.png"></p>
+<h3 id="RxJS可以用于生产吗？"><a href="#RxJS可以用于生产吗？" class="headerlink" title="RxJS可以用于生产吗？"></a><strong>RxJS可以用于生产吗？</strong></h3><p>RxJS由微软在2012年开源，目前各个语言库由ReactiveX组织维护。RxJS在GitHub上已有25.3K的start，目前最新版本为7.2，并且持续开发维护中。<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pan.udolphin.com/files/image/2021/8/39b483e61e0786e3b32b5538a4919772.png"
+                      alt="1344853561-59f30311dfbcc_fix732.png"
+                ></p>
 <h2 id="RxJS基本介绍"><a href="#RxJS基本介绍" class="headerlink" title="RxJS基本介绍"></a><strong>RxJS基本介绍</strong></h2><p>RxJS 是 Reactive Extensions for JavaScript 的缩写，起源于 Reactive Extensions，是一个基于可观测数据流 Stream 结合观察者模式和迭代器模式的一种异步编程的应用库。</p>
 <p>RxJS 中解决异步事件管理的基本概念是：</p>
 <ul>
@@ -239,7 +298,12 @@
 <h4 id="Reactive-Programming"><a href="#Reactive-Programming" class="headerlink" title="Reactive Programming"></a><strong>Reactive Programming</strong></h4><blockquote>
 <p>很多人一谈到Reactive Programming 就会直接联想到是在讲RxJS，但实际上Reactive Programming 仍是一种编程范式，在不同的场景都有机会遇到，而非只存在于RxJS，尤雨溪(Vue 的作者)就曾在twitter 对此表达不满！</p>
 </blockquote>
-<p><img src="https://res.cloudinary.com/dohtkyi84/image/upload/v1480531809/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7_2016-11-30_%E4%B8%8A%E5%8D%886.23.49_zdniva.png" alt="响应式编程"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://res.cloudinary.com/dohtkyi84/image/upload/v1480531809/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7_2016-11-30_%E4%B8%8A%E5%8D%886.23.49_zdniva.png"
+                      alt="响应式编程"
+                ></p>
 <p>Reactive Programming 简单来说就是当变量或资源发生变动时，有变量或资源自动告诉我发生变动了。</p>
 <p>举个例子：<br>当我们在使用vue 开发时，只要一有绑定的变量发生改变，相关的变量及页面也会跟着变动，而开发者不需要写这其中的任何一行代码。</p>
 <p>Rx基本上就是上述两个观念的结合，这个部分相信读者在看完之后的章节，会有更深的感悟。</p>
@@ -283,7 +347,12 @@
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr = [<span class="string">&#x27;Angular&#x27;</span>, <span class="string">&#x27;React&#x27;</span>, <span class="string">&#x27;Vue&#x27;</span>];</span><br><span class="line"><span class="keyword">function</span>* <span class="title function_">generatorEach</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> entries = arr.<span class="title function_">entries</span>();</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> [index, value] <span class="keyword">of</span> arr.<span class="title function_">entries</span>()) &#123;</span><br><span class="line">    <span class="keyword">yield</span> <span class="variable language_">console</span>.<span class="title function_">log</span>([index, value]);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> each = <span class="title function_">generatorEach</span>();</span><br><span class="line">each.<span class="title function_">next</span>();</span><br><span class="line">each.<span class="title function_">next</span>();</span><br><span class="line">each.<span class="title function_">next</span>();</span><br></pre></td></tr></table></figure>
 <p><a class="link"   target="_blank" rel="noopener" href="https://stackblitz.com/edit/rxjs-w11mw1?file=index.ts" >stackblitz<i class="fas fa-external-link-alt"></i></a></p>
 <h3 id="Observable-1"><a href="#Observable-1" class="headerlink" title="Observable"></a><strong>Observable</strong></h3><p>在了解观察者和迭代器模式之后，不知道大家有没有发现其实这两种设计模式有个共同的特性，就是他们都是渐进式的取得资料，差别只在于Observer是生产者推送资料(push)而Iterator是消费者要求资料(pull)。</p>
-<p><img src="https://res.cloudinary.com/dohtkyi84/image/upload/v1482240798/push_pull.png" alt="push and pull"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://res.cloudinary.com/dohtkyi84/image/upload/v1482240798/push_pull.png"
+                      alt="push and pull"
+                ></p>
 <p>Observable其实就是这两种设计模式思想的结合，Observable具有生产者推送资料的特性，同时能像数列，拥有数列推送资料的方法。</p>
 <h3 id="建立Observable-一"><a href="#建立Observable-一" class="headerlink" title="建立Observable(一)"></a><strong>建立Observable(一)</strong></h3><p>建立Observable的方法有非常多种，其中直接new出一个实例是最基本的方法。<br>Observable类接受一个callback function，这个callback function会接受一个observer参数。</p>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> observable = <span class="keyword">new</span> <span class="title class_">Observable</span>(<span class="function"><span class="params">subscriber</span> =&gt;</span> &#123;</span><br><span class="line">  subscriber.<span class="title function_">next</span>(<span class="number">1</span>);</span><br><span class="line">  subscriber.<span class="title function_">next</span>(<span class="number">2</span>);</span><br><span class="line">  subscriber.<span class="title function_">next</span>(<span class="number">3</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
@@ -409,11 +478,21 @@
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> input = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;#input&#x27;</span>);</span><br></pre></td></tr></table></figure>
 
 <h5 id="第二步，使用之前说过的fromEvent为input元素绑定input事件。"><a href="#第二步，使用之前说过的fromEvent为input元素绑定input事件。" class="headerlink" title="第二步，使用之前说过的fromEvent为input元素绑定input事件。"></a>第二步，使用之前说过的fromEvent为input元素绑定input事件。</h5><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; <span class="keyword">of</span>, fromEvent &#125; <span class="keyword">from</span> <span class="string">&#x27;rxjs&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; debounceTime, distinctUntilChanged, map &#125; <span class="keyword">from</span> <span class="string">&#x27;rxjs/operators&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> input = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;#input&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="title function_">fromEvent</span>(input, <span class="string">&#x27;input&#x27;</span>)</span><br><span class="line">  .<span class="title function_">subscribe</span>(<span class="variable language_">console</span>.<span class="property">log</span>);</span><br></pre></td></tr></table></figure>
-<p>效果图<br><img src="https://pan.udolphin.com/files/image/2021/8/e054cc33fbcd72b580078f8430c6dd2e.gif" alt="RxJS 防抖动态图"></p>
+<p>效果图<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pan.udolphin.com/files/image/2021/8/e054cc33fbcd72b580078f8430c6dd2e.gif"
+                      alt="RxJS 防抖动态图"
+                ></p>
 <p>这时我们输入值的话可以看到每一次输入都会打印一次InputEvent，如果想要做到在每次输入之后等待100ms再打印值也很简单，只需要加入<code>debounceTime(100)</code>。</p>
 <h5 id="第三步，这里我们使用map获取输入的值，然后使用debounceTime操作符完成基础的防抖功能。"><a href="#第三步，这里我们使用map获取输入的值，然后使用debounceTime操作符完成基础的防抖功能。" class="headerlink" title="第三步，这里我们使用map获取输入的值，然后使用debounceTime操作符完成基础的防抖功能。"></a>第三步，这里我们使用<code>map</code>获取输入的值，然后使用<code>debounceTime</code>操作符完成基础的防抖功能。</h5><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; <span class="keyword">of</span>, fromEvent &#125; <span class="keyword">from</span> <span class="string">&#x27;rxjs&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; debounceTime, distinctUntilChanged, map &#125; <span class="keyword">from</span> <span class="string">&#x27;rxjs/operators&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> input = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;#input&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="title function_">fromEvent</span>(input, <span class="string">&#x27;input&#x27;</span>)</span><br><span class="line">  .<span class="title function_">pipe</span>(</span><br><span class="line">    <span class="title function_">debounceTime</span>(<span class="number">100</span>),</span><br><span class="line">    <span class="title function_">map</span>(<span class="function">(<span class="params">x: InputEvent</span>) =&gt;</span> (x.<span class="property">target</span> <span class="keyword">as</span> <span class="title class_">HTMLInputElement</span>).<span class="property">value</span>)</span><br><span class="line">  )</span><br><span class="line">  .<span class="title function_">subscribe</span>(<span class="variable language_">console</span>.<span class="property">log</span>);</span><br></pre></td></tr></table></figure>
 
-<p>效果图<br><img src="https://pan.udolphin.com/files/image/2021/8/b7b19b99f70369e0fcb1fe4d7b5c3226.gif" alt="防抖debounceTime.gif"></p>
+<p>效果图<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pan.udolphin.com/files/image/2021/8/b7b19b99f70369e0fcb1fe4d7b5c3226.gif"
+                      alt="防抖debounceTime.gif"
+                ></p>
 <p>此时我们可以看到在已经具有防抖的效果了。</p>
 <p>完整代码 <a class="link"   target="_blank" rel="noopener" href="https://stackblitz.com/edit/rxjs-qoupke?file=index.ts" >stackblitz<i class="fas fa-external-link-alt"></i></a></p>
 <h3 id="拖拽"><a href="#拖拽" class="headerlink" title="拖拽"></a><strong>拖拽</strong></h3><p>用到的操作符</p>
@@ -459,7 +538,12 @@
 <p>最后我们改变div的样式，完成拖拽效果。</p>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">subscribe</span>(<span class="function"><span class="params">x</span> =&gt;</span> &#123;</span><br><span class="line">    main.<span class="property">style</span>.<span class="property">transform</span> = <span class="string">`translate(<span class="subst">$&#123;x.x&#125;</span>px, <span class="subst">$&#123;x.y&#125;</span>px)`</span>;</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
 
-<p>效果图<br><img src="https://pan.udolphin.com/files/image/2021/8/51441ad26da404e2f7f0637033a9e22f.gif" alt="RxJS拖拽"></p>
+<p>效果图<br><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pan.udolphin.com/files/image/2021/8/51441ad26da404e2f7f0637033a9e22f.gif"
+                      alt="RxJS拖拽"
+                ></p>
 <p>完整代码 <a class="link"   target="_blank" rel="noopener" href="https://stackblitz.com/edit/rxjs-xbyk73?file=index.ts" >stackblitz<i class="fas fa-external-link-alt"></i></a></p>
 <h3 id="skip"><a href="#skip" class="headerlink" title="skip"></a><strong>skip</strong></h3><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; <span class="keyword">of</span>, map, interval &#125; <span class="keyword">from</span> <span class="string">&#x27;rxjs&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; skip &#125; <span class="keyword">from</span> <span class="string">&#x27;rxjs/operators&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> source = <span class="title function_">interval</span>(<span class="number">1000</span>).<span class="title function_">pipe</span>(<span class="title function_">skip</span>(<span class="number">2</span>));</span><br><span class="line">source.<span class="title function_">subscribe</span>(<span class="variable language_">console</span>.<span class="property">log</span>);</span><br></pre></td></tr></table></figure>
 <p><a class="link"   target="_blank" rel="noopener" href="https://stackblitz.com/edit/rxjs-nnzxot?file=index.ts" >stackblitz<i class="fas fa-external-link-alt"></i></a></p>
@@ -555,6 +639,33 @@
             </div>
 
             
+                <div class="post-copyright-info">
+                    
+<div class="article-copyright-info-container">
+    <ul class="copyright-info-content">
+        <li class="post-title">
+            <span class="type">Post title</span>: <span class="content">意博趣深 - RxJS</span>
+        </li>
+        <li class="post-author">
+            <span class="type">Post author</span>: <span class="content">Ljp</span>
+        </li>
+        <li class="post-time">
+            <span class="type">Create time</span>: <span class="content">2023-06-28 15:52:40</span>
+        </li>
+        <li class="post-link">
+            <span class="type">Post link</span>: <span class="content">/2023/06/28/意博趣深 - RxJS/</span>
+        </li>
+        <li class="post-license">
+            <span class="type">Copyright notice</span>: <span class="content">All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.</span>
+        </li>
+    </ul>
+    <div class="copy-copyright-info flex-center tooltip" data-content="Copy copyright info" data-offset-y="-2px">
+        <i class="fa-solid fa-copy"></i>
+    </div>
+</div>
+
+                </div>
+            
 
             
 
@@ -599,6 +710,15 @@
         </div>
 
         
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%A4%E8%AF%86RxJS"><span class="nav-number">1.</span> <span class="nav-text">认识RxJS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%9E%E5%90%8C%E6%AD%A5%E5%B8%B8%E8%A7%81%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">1.1.</span> <span class="nav-text">非同步常见的问题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Race-Condition"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">Race Condition</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Memory-Leak"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">Memory Leak</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Complex-State"><span class="nav-number">1.1.0.3.</span> <span class="nav-text">Complex State</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Exception-Handling"><span class="nav-number">1.1.0.4.</span> <span class="nav-text">Exception Handling</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%84%E7%A7%8D%E4%B8%8D%E5%90%8C%E7%9A%84API"><span class="nav-number">1.2.</span> <span class="nav-text">各种不同的API</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RxJS%E5%8F%AF%E4%BB%A5%E7%94%A8%E4%BA%8E%E7%94%9F%E4%BA%A7%E5%90%97%EF%BC%9F"><span class="nav-number">1.3.</span> <span class="nav-text">RxJS可以用于生产吗？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RxJS%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D"><span class="nav-number">2.</span> <span class="nav-text">RxJS基本介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Functional-Reactive-Programming"><span class="nav-number">2.1.</span> <span class="nav-text">Functional Reactive Programming</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Functional-Programming"><span class="nav-number">2.1.1.</span> <span class="nav-text">Functional Programming</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Reactive-Programming"><span class="nav-number">2.1.2.</span> <span class="nav-text">Reactive Programming</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Observable"><span class="nav-number">3.</span> <span class="nav-text">Observable</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F-Observer-Pattern"><span class="nav-number">3.1.</span> <span class="nav-text">观察者模式(Observer Pattern)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F-Iterator-Pattern"><span class="nav-number">3.2.</span> <span class="nav-text">迭代器模式(Iterator Pattern)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%86%85%E9%83%A8%E8%BF%AD%E4%BB%A3%E5%99%A8"><span class="nav-number">3.2.1.</span> <span class="nav-text">内部迭代器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%96%E9%83%A8%E8%BF%AD%E4%BB%A3%E5%99%A8"><span class="nav-number">3.2.2.</span> <span class="nav-text">外部迭代器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%9D%E8%80%83"><span class="nav-number">3.2.3.</span> <span class="nav-text">思考</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Observable-1"><span class="nav-number">3.3.</span> <span class="nav-text">Observable</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BB%BA%E7%AB%8BObservable-%E4%B8%80"><span class="nav-number">3.4.</span> <span class="nav-text">建立Observable(一)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Observer-%E8%A7%82%E5%AF%9F%E8%80%85"><span class="nav-number">3.5.</span> <span class="nav-text">Observer(观察者)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BB%BA%E7%AB%8BObservable-%E4%BA%8C"><span class="nav-number">3.6.</span> <span class="nav-text">建立Observable(二)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Creation-Operator"><span class="nav-number">3.6.1.</span> <span class="nav-text">Creation Operator</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#of"><span class="nav-number">3.6.1.1.</span> <span class="nav-text">of</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#fromEvent"><span class="nav-number">3.6.1.2.</span> <span class="nav-text">fromEvent</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E6%80%9D%E8%80%83-1"><span class="nav-number">3.6.1.2.1.</span> <span class="nav-text">思考</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#interval"><span class="nav-number">3.6.1.3.</span> <span class="nav-text">interval</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#timer"><span class="nav-number">3.6.1.4.</span> <span class="nav-text">timer</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Subscription"><span class="nav-number">4.</span> <span class="nav-text">Subscription</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Operator-%E6%93%8D%E4%BD%9C%E7%AC%A6"><span class="nav-number">5.</span> <span class="nav-text">Operator(操作符)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFOperator%EF%BC%9F"><span class="nav-number">5.1.</span> <span class="nav-text">什么是Operator？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%98%B2%E6%8A%96"><span class="nav-number">5.2.</span> <span class="nav-text">防抖</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%8C%E4%BD%BF%E7%94%A8%E4%B9%8B%E5%89%8D%E8%AF%B4%E8%BF%87%E7%9A%84fromEvent%E4%B8%BAinput%E5%85%83%E7%B4%A0%E7%BB%91%E5%AE%9Ainput%E4%BA%8B%E4%BB%B6%E3%80%82"><span class="nav-number">5.2.0.1.</span> <span class="nav-text">第二步，使用之前说过的fromEvent为input元素绑定input事件。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%EF%BC%8C%E8%BF%99%E9%87%8C%E6%88%91%E4%BB%AC%E4%BD%BF%E7%94%A8map%E8%8E%B7%E5%8F%96%E8%BE%93%E5%85%A5%E7%9A%84%E5%80%BC%EF%BC%8C%E7%84%B6%E5%90%8E%E4%BD%BF%E7%94%A8debounceTime%E6%93%8D%E4%BD%9C%E7%AC%A6%E5%AE%8C%E6%88%90%E5%9F%BA%E7%A1%80%E7%9A%84%E9%98%B2%E6%8A%96%E5%8A%9F%E8%83%BD%E3%80%82"><span class="nav-number">5.2.0.2.</span> <span class="nav-text">第三步，这里我们使用map获取输入的值，然后使用debounceTime操作符完成基础的防抖功能。</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8B%96%E6%8B%BD"><span class="nav-number">5.3.</span> <span class="nav-text">拖拽</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90"><span class="nav-number">5.3.0.1.</span> <span class="nav-text">需求分析</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%8C%E5%8F%96%E5%BE%97%E4%BC%9A%E7%94%A8%E5%88%B0%E7%9A%84dom%E5%85%83%E7%B4%A0%E3%80%82"><span class="nav-number">5.3.0.2.</span> <span class="nav-text">第一步，取得会用到的dom元素。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%8C%E5%BB%BA%E7%AB%8B%E4%BC%9A%E7%94%A8%E5%88%B0%E7%9A%84observable"><span class="nav-number">5.3.0.3.</span> <span class="nav-text">第二步，建立会用到的observable</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%EF%BC%8C%E6%92%B0%E5%86%99%E4%BB%A3%E7%A0%81%E9%80%BB%E8%BE%91"><span class="nav-number">5.3.0.4.</span> <span class="nav-text">第三步，撰写代码逻辑</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#skip"><span class="nav-number">5.4.</span> <span class="nav-text">skip</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#takeLast"><span class="nav-number">5.5.</span> <span class="nav-text">takeLast</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#last"><span class="nav-number">5.6.</span> <span class="nav-text">last</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#concat"><span class="nav-number">5.7.</span> <span class="nav-text">concat</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Subject"><span class="nav-number">6.</span> <span class="nav-text">Subject</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Multiple-subscriptions"><span class="nav-number">6.1.</span> <span class="nav-text">Multiple subscriptions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFSubject%EF%BC%9F"><span class="nav-number">6.2.</span> <span class="nav-text">什么是Subject？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BehaviorSubject"><span class="nav-number">6.3.</span> <span class="nav-text">BehaviorSubject</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ReplaySubject"><span class="nav-number">6.4.</span> <span class="nav-text">ReplaySubject</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AsyncSubject"><span class="nav-number">6.5.</span> <span class="nav-text">AsyncSubject</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%B7%E4%B8%8E%E7%83%AD%E7%9A%84Observable"><span class="nav-number">7.</span> <span class="nav-text">冷与热的Observable</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%B7%E7%9A%84Observable"><span class="nav-number">7.1.</span> <span class="nav-text">冷的Observable</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%83%AD%E7%9A%84Observable"><span class="nav-number">7.2.</span> <span class="nav-text">热的Observable</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#multicast"><span class="nav-number">7.2.1.</span> <span class="nav-text">multicast</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#refCount"><span class="nav-number">7.2.2.</span> <span class="nav-text">refCount</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#publish"><span class="nav-number">7.2.3.</span> <span class="nav-text">publish</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#share"><span class="nav-number">7.2.4.</span> <span class="nav-text">share</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">8.</span> <span class="nav-text">总结</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        
     </div>
 </div>
 
@@ -620,9 +740,20 @@
             2023
             
                 &nbsp;<i class="fas fa-heart icon-animate"></i>
-                &nbsp;<a href="/">Keep Team</a>
+                &nbsp;<a href="/">Ljp</a>
             
         </div>
+        
+            <script async data-pjax
+                    src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    Visitor Count&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                
+                
+                    Totalview&nbsp;<span id="busuanzi_value_site_pv"></span>
+                
+            </div>
         
         <div class="theme-info info-item">
             Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
@@ -640,6 +771,10 @@
             <div class="post-tools-container">
     <ul class="tools-list">
         <!-- TOC aside toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
         
 
         <!-- go comment -->
@@ -669,10 +804,6 @@
         
 
         
-            <li class="tools-item tool-scroll-to-top flex-center">
-                <i class="fas fa-arrow-up"></i>
-            </li>
-        
 
         <li class="tools-item tool-scroll-to-bottom flex-center">
             <i class="fas fa-arrow-down"></i>
@@ -684,6 +815,11 @@
             <i class="fas fa-cog fa-spin"></i>
         </li>
         
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
     </ul>
 </div>
 
@@ -693,6 +829,35 @@
     <img class="zoom-in-image">
 </div>
 
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
 
     
 
@@ -715,20 +880,74 @@
 
 
 
+    
+<script src="/js/local-search.js"></script>
 
 
 
 
+    
+<script src="/js/code-block.js"></script>
 
-<div class="post-scripts">
+
+
+
+    
+<script src="/js/lazyload.js"></script>
+
+
+
+<div class="post-scripts pjax">
     
         
 <script src="/js/post-helper.js"></script>
 
         
+            
+<script src="/js/libs/anime.min.js"></script>
+
+        
+        
+            
+<script src="/js/toc.js"></script>
+
         
     
 </div>
+
+
+    
+<script src="/js/libs/pjax.min.js"></script>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
 
 
 

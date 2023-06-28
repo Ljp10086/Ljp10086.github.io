@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="keywords" content="Hexo Theme Keep">
     <meta name="description" content="Hexo Theme Keep">
-    <meta name="author" content="Keep Team">
+    <meta name="author" content="Ljp">
     
     <title>
         
             浅谈移动端 |
         
-        Keep Theme
+        Ljp&#39;s Blog
     </title>
     
 <link rel="stylesheet" href="/css/style.css">
 
-    <link rel="shortcut icon" href="/images/logo.svg">
+    <link rel="shortcut icon" href="/images/favicon.ico">
     
 <link rel="stylesheet" href="/font/css/fontawesome.min.css">
 
@@ -32,7 +32,7 @@
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {}
     KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"en"}
-    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066cc","logo":"/images/logo.svg","favicon":"/images/logo.svg","avatar":"/images/avatar.svg","font_size":null,"font_family":null,"hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":false,"wordcount":false,"min2read":false},"img_align":"left","copyright_info":false},"version":"3.6.1"}
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true},"style":{"primary_color":"#0066cc","logo":"/images/logo.png","favicon":"/images/favicon.ico","avatar":"/images/logo.png","font_size":null,"font_family":null,"hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"header_transparent":true,"background_img":"/images/bg.svg","description":"行胜于言，实践成真","font_color":null,"hitokoto":true},"scroll":{"progress_bar":true,"percent":true}},"local_search":{"enable":true,"preload":true},"code_copy":{},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":true},"lazyload":{"enable":true},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":true,"wordcount":true,"min2read":true},"img_align":"left","copyright_info":true},"version":"3.6.1"}
     KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
     KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
     KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original article title","author":"Original article author","link":"Original article link"}
@@ -43,7 +43,12 @@
 <body>
 <div class="progress-bar-container">
     
+        <span class="scroll-progress-bar"></span>
+    
 
+    
+        <span class="pjax-progress-bar"></span>
+        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
     
 </div>
 
@@ -62,11 +67,11 @@
         <div class="left">
             
                 <a class="logo-image" href="/">
-                    <img src="/images/logo.svg">
+                    <img src="/images/logo.png">
                 </a>
             
             <a class="logo-title" href="/">
-               Keep Theme
+               Ljp&#39;s Blog
             </a>
         </div>
 
@@ -90,10 +95,40 @@
                             </a>
                         </li>
                     
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                TAGS
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                CATEGORIES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                ABOUT
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
                     
                 </ul>
             </div>
             <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
                 
                 <div class="icon-item menu-bar">
                     <div class="menu-bar-middle"></div>
@@ -113,6 +148,21 @@
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">TAGS</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">CATEGORIES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">ABOUT</a>
                 </li>
             
         </ul>
@@ -141,11 +191,11 @@
             
                 <div class="article-header">
                     <div class="avatar">
-                        <img src="/images/avatar.svg">
+                        <img src="/images/logo.png">
                     </div>
                     <div class="info">
                         <div class="author">
-                            <span class="name">Keep Team</span>
+                            <span class="name">Ljp</span>
                             
                                 <span class="author-label">Lv1</span>
                             
@@ -157,13 +207,13 @@
         
             <i class="fa-regular fa-calendar-plus"></i>&nbsp;
         
-        <span class="pc">2023-06-28 03:16:07</span>
-        <span class="mobile">2023-06-28 03:16</span>
+        <span class="pc">2023-06-28 15:52:40</span>
+        <span class="mobile">2023-06-28 15:52</span>
     </span>
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2023-06-28 03:16:07</span>
+        <span class="pc">2023-06-28 15:52:40</span>
     </span>
     
     
@@ -172,6 +222,10 @@
     
     
     
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
     
 </div>
 
@@ -183,7 +237,12 @@
             <div class="article-content keep-markdown-body">
                 
 
-                <p><img src="https://pan.udolphin.com/files/file/2021/12/eafaec801d44b0515f4f9c727ad705de.png"></p>
+                <p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pan.udolphin.com/files/file/2021/12/eafaec801d44b0515f4f9c727ad705de.png"
+                     
+                ></p>
 <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h3><p>最近从零到一走完了App从开发到部署的流程，期间有调研很多移动端技术以及App部署的解决方案，借此机会分享给大家的。</p>
 <h3 id="移动端技术发展史"><a href="#移动端技术发展史" class="headerlink" title="移动端技术发展史"></a><strong>移动端技术发展史</strong></h3><h4 id="智能手机操作系统"><a href="#智能手机操作系统" class="headerlink" title="智能手机操作系统"></a><strong>智能手机操作系统</strong></h4><blockquote>
 <p>智能手机，是指像个人电脑一样，具有独立的操作系统，独立的运行空间，可以由用户自行安装软件、游戏、导航等第三方服务商提供的程序，并可以通过移动通讯网络来实现无线网络接入的手机类型的总称。目前智能手机的发展趋势是充分加入了人工智能、5G等多项专利技术，使智能手机成为了用途最为广泛的专利产品。</p>
@@ -226,7 +285,12 @@
 <h5 id="移动端开发技术演进"><a href="#移动端开发技术演进" class="headerlink" title="移动端开发技术演进"></a><strong>移动端开发技术演进</strong></h5><blockquote>
 <p>2008年7月IPhone推出第一代手机IPhone 3G，同年9月谷歌正式发布了Android 1.0系统，标志着我们正式步入移动端发展期，按照技术开发的历程移动端（目前特指Android和iOS）的发展大致可以分为4个阶段：Native App -&gt; Hybrid App -&gt; React Native -&gt; Flutter。</p>
 </blockquote>
-<h6 id="Native-App-原生应用"><a href="#Native-App-原生应用" class="headerlink" title="Native App(原生应用)"></a><strong>Native App(原生应用)</strong></h6><p><img src="https://pan.udolphin.com/files/image/2021/12/9838785a4f6af8e8673da018dedf5193.png"></p>
+<h6 id="Native-App-原生应用"><a href="#Native-App-原生应用" class="headerlink" title="Native App(原生应用)"></a><strong>Native App(原生应用)</strong></h6><p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pan.udolphin.com/files/image/2021/12/9838785a4f6af8e8673da018dedf5193.png"
+                     
+                ></p>
 <blockquote>
 <p>这是最为传统的一种移动端开发技术，使用Object-c&#x2F;Swift、Java&#x2F;Kotlin这些语言开发出的App一般叫做Native App。</p>
 </blockquote>
@@ -240,7 +304,12 @@
 <li>使用这种技术开发一项功能我们需要在Android和IOS两端开发，维护以及开发的成本较高。</li>
 <li>同时无法进行动态化更新，如果添加新功能都需要到相应的平台进行发版，尤其IOS审核周期较长，如遇到紧急问题并不能立即解决。</li>
 </ol>
-<h6 id="Web-App"><a href="#Web-App" class="headerlink" title="Web App"></a><strong>Web App</strong></h6><p><img src="https://pan.udolphin.com/files/file/2021/11/09a0ab685705341c9b63beb618eb16fe.png"></p>
+<h6 id="Web-App"><a href="#Web-App" class="headerlink" title="Web App"></a><strong>Web App</strong></h6><p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pan.udolphin.com/files/file/2021/11/09a0ab685705341c9b63beb618eb16fe.png"
+                     
+                ></p>
 <blockquote>
 <p>Web App 其实就是我们使用手机浏览器打开的网址。</p>
 </blockquote>
@@ -254,7 +323,12 @@
 <li>Web App无法直接调用系统Api，如摄像头、相册等，局限性较大。</li>
 <li>比较依赖于网络，不支持离线模式，页面加载速度受限于浏览器性能，导致一些场景很难去做到原生的体验。</li>
 </ol>
-<h6 id="Hybrid-App"><a href="#Hybrid-App" class="headerlink" title="Hybrid App"></a><strong>Hybrid App</strong></h6><p><img src="https://pan.udolphin.com/files/image/2021/12/336c9df4504b8d69e52f3193e3bd8d73.png"></p>
+<h6 id="Hybrid-App"><a href="#Hybrid-App" class="headerlink" title="Hybrid App"></a><strong>Hybrid App</strong></h6><p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pan.udolphin.com/files/image/2021/12/336c9df4504b8d69e52f3193e3bd8d73.png"
+                     
+                ></p>
 <blockquote>
 <p>Hybrid是综上所述的两种方式结合，一般被称为混合开发。</p>
 </blockquote>
@@ -272,16 +346,31 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">WebView(</span><br><span class="line">  initialUrl:</span><br><span class="line">      &#x27;https://wiki.uino.com/d/svelte-simple-introduce.html&#x27;,</span><br><span class="line">  javascriptMode: JavascriptMode.unrestricted,</span><br><span class="line">  onWebViewCreated: (WebViewController c) &#123;</span><br><span class="line">    _controller = c;</span><br><span class="line">  &#125;,</span><br><span class="line">  javascriptChannels: &lt;JavascriptChannel&gt;[</span><br><span class="line">    _alertJavascriptChannel(context),</span><br><span class="line">  ].toSet(),</span><br><span class="line">  onPageFinished: (v) async &#123;</span><br><span class="line">    final String cookies = await _controller</span><br><span class="line">        .runJavascriptReturningResult(&#x27;document.cookie&#x27;);</span><br><span class="line">    print(cookies);</span><br><span class="line">    ToastManager.showSuccess(cookies);</span><br><span class="line">  &#125;,</span><br><span class="line">),</span><br></pre></td></tr></table></figure>
 
 <p>手机截图：</p>
-<img  width="20%" src="https://pan.udolphin.com/files/image/2021/12/ff52f07af9deb1c26474c9d19b14f5bb.png" />
+<img   width="20%" 
+                     lazyload
+                     alt="image"
+                     data-src="https://pan.udolphin.com/files/image/2021/12/ff52f07af9deb1c26474c9d19b14f5bb.png"
+                      
+                >
 
 <h6 id="React-Native"><a href="#React-Native" class="headerlink" title="React Native"></a><strong>React Native</strong></h6><blockquote>
 <p>Face Book(现Meta)在研究了许久Hybrid App之后发现其性能始终需要依赖于浏览器的渲染效率，无法突破浏览器渲染的性能瓶颈，于是转而基于React发布了React Native这个框架。</p>
 </blockquote>
 <p>受制于浏览器渲染的性能，React Native 吸取经验将渲染这部分交给 Native 来做，大大提高了体验。</p>
-<p><img src="https://pan.udolphin.com/files/image/2021/12/608f6525aa9db5c6a251963dc3206c1d.png"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pan.udolphin.com/files/image/2021/12/608f6525aa9db5c6a251963dc3206c1d.png"
+                     
+                ></p>
 <p>RN 中直接使用 JavaScriptCore 来提供 JS 的运行环境，通过 Bridge 去通知 Native 绘制界面，所以最终页面是由Native绘制的，性能相较于Hybrid App要好上不少。</p>
 <p>但是受限于JS与Native通信的性能消耗，性能上依然不及Native。</p>
-<p><img src="https://pan.udolphin.com/files/file/2021/11/541b28f1668ea956576f03d660a49ae2.png"></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pan.udolphin.com/files/file/2021/11/541b28f1668ea956576f03d660a49ae2.png"
+                     
+                ></p>
 <h6 id="Flutter"><a href="#Flutter" class="headerlink" title="Flutter"></a><strong>Flutter</strong></h6><blockquote>
 <p>Flutter吸收了前面的经验，它既没有使用WebView，也没有使用原生控件进行绘制，而是自己实现了一套高性能渲染引擎来绘制UI，这个引擎就是大名鼎鼎的Skia，Skia是一个2D绘图引擎库，Chrome和Android都是采用Skia作为引擎。Flutter完美的解决了跨平台代码复用和性能问题。</p>
 </blockquote>
@@ -372,6 +461,33 @@
             </div>
 
             
+                <div class="post-copyright-info">
+                    
+<div class="article-copyright-info-container">
+    <ul class="copyright-info-content">
+        <li class="post-title">
+            <span class="type">Post title</span>: <span class="content">浅谈移动端</span>
+        </li>
+        <li class="post-author">
+            <span class="type">Post author</span>: <span class="content">Ljp</span>
+        </li>
+        <li class="post-time">
+            <span class="type">Create time</span>: <span class="content">2023-06-28 15:52:40</span>
+        </li>
+        <li class="post-link">
+            <span class="type">Post link</span>: <span class="content">/2023/06/28/浅谈移动端/</span>
+        </li>
+        <li class="post-license">
+            <span class="type">Copyright notice</span>: <span class="content">All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.</span>
+        </li>
+    </ul>
+    <div class="copy-copyright-info flex-center tooltip" data-content="Copy copyright info" data-offset-y="-2px">
+        <i class="fa-solid fa-copy"></i>
+    </div>
+</div>
+
+                </div>
+            
 
             
 
@@ -416,6 +532,15 @@
         </div>
 
         
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A7%BB%E5%8A%A8%E7%AB%AF%E6%8A%80%E6%9C%AF%E5%8F%91%E5%B1%95%E5%8F%B2"><span class="nav-number">2.</span> <span class="nav-text">移动端技术发展史</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%99%BA%E8%83%BD%E6%89%8B%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="nav-number">2.1.</span> <span class="nav-text">智能手机操作系统</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%A1%9E%E7%8F%AD-Symbian-%E7%B3%BB%E7%BB%9F"><span class="nav-number">2.1.1.</span> <span class="nav-text">塞班(Symbian) 系统</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Windows-Phone"><span class="nav-number">2.1.2.</span> <span class="nav-text">Windows Phone</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Android"><span class="nav-number">2.1.3.</span> <span class="nav-text">Android</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#IOS"><span class="nav-number">2.1.4.</span> <span class="nav-text">IOS</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF%E6%BC%94%E8%BF%9B"><span class="nav-number">2.1.5.</span> <span class="nav-text">移动端开发技术演进</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Native-App-%E5%8E%9F%E7%94%9F%E5%BA%94%E7%94%A8"><span class="nav-number">2.1.5.1.</span> <span class="nav-text">Native App(原生应用)</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Web-App"><span class="nav-number">2.1.5.2.</span> <span class="nav-text">Web App</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Hybrid-App"><span class="nav-number">2.1.5.3.</span> <span class="nav-text">Hybrid App</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#React-Native"><span class="nav-number">2.1.5.4.</span> <span class="nav-text">React Native</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Flutter"><span class="nav-number">2.1.5.5.</span> <span class="nav-text">Flutter</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B0%8F%E7%BB%93"><span class="nav-number">2.2.</span> <span class="nav-text">小结</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#App%E4%B9%8B%E9%97%B4%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F%E6%80%BB%E7%BB%93"><span class="nav-number">2.3.</span> <span class="nav-text">App之间通信方式总结</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#URL-Scheme"><span class="nav-number">2.4.</span> <span class="nav-text">URL Scheme</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Deeplink"><span class="nav-number">2.5.</span> <span class="nav-text">Deeplink</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IOS%E4%B8%8A%E7%BA%BF%E6%96%B9%E5%BC%8F%E6%80%BB%E7%BB%93"><span class="nav-number">3.</span> <span class="nav-text">IOS上线方式总结</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        
     </div>
 </div>
 
@@ -437,9 +562,20 @@
             2023
             
                 &nbsp;<i class="fas fa-heart icon-animate"></i>
-                &nbsp;<a href="/">Keep Team</a>
+                &nbsp;<a href="/">Ljp</a>
             
         </div>
+        
+            <script async data-pjax
+                    src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    Visitor Count&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                
+                
+                    Totalview&nbsp;<span id="busuanzi_value_site_pv"></span>
+                
+            </div>
         
         <div class="theme-info info-item">
             Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
@@ -457,6 +593,10 @@
             <div class="post-tools-container">
     <ul class="tools-list">
         <!-- TOC aside toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
         
 
         <!-- go comment -->
@@ -486,10 +626,6 @@
         
 
         
-            <li class="tools-item tool-scroll-to-top flex-center">
-                <i class="fas fa-arrow-up"></i>
-            </li>
-        
 
         <li class="tools-item tool-scroll-to-bottom flex-center">
             <i class="fas fa-arrow-down"></i>
@@ -501,6 +637,11 @@
             <i class="fas fa-cog fa-spin"></i>
         </li>
         
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
     </ul>
 </div>
 
@@ -510,6 +651,35 @@
     <img class="zoom-in-image">
 </div>
 
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
 
     
 
@@ -532,20 +702,74 @@
 
 
 
+    
+<script src="/js/local-search.js"></script>
 
 
 
 
+    
+<script src="/js/code-block.js"></script>
 
-<div class="post-scripts">
+
+
+
+    
+<script src="/js/lazyload.js"></script>
+
+
+
+<div class="post-scripts pjax">
     
         
 <script src="/js/post-helper.js"></script>
 
         
+            
+<script src="/js/libs/anime.min.js"></script>
+
+        
+        
+            
+<script src="/js/toc.js"></script>
+
         
     
 </div>
+
+
+    
+<script src="/js/libs/pjax.min.js"></script>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
 
 
 
