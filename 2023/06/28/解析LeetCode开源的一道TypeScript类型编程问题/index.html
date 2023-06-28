@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Keep Team">
+    
+    <title>
+        
+            解析LeetCode开源的一道TypeScript类型编程问题 |
+        
+        Keep Theme
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo.svg">
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"en"}
+    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066cc","logo":"/images/logo.svg","favicon":"/images/logo.svg","avatar":"/images/avatar.svg","font_size":null,"font_family":null,"hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":false,"wordcount":false,"min2read":false},"img_align":"left","copyright_info":false},"version":"3.6.1"}
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
+    KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original article title","author":"Original article author","link":"Original article link"}
+  </script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="logo-title" href="/">
+               Keep Theme
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">解析LeetCode开源的一道TypeScript类型编程问题</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/avatar.svg">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">Keep Team</span>
+                            
+                                <span class="author-label">Lv1</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2023-06-28 03:05:15</span>
+        <span class="mobile">2023-06-28 03:05</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2023-06-28 03:05:15</span>
+    </span>
+    
+    
+    
+
+    
+    
+    
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>前一阵子偶然间看到了有LeetCode开源的一道TS题，好奇之下我点进入看了一下，没想到仔细一看，居然一行代码都看不懂，让我备受打击，于是我挑灯夜战，连夜学习Ts类型编程，终于在努力了半把个月之后于今日将此题解出，写此文章记录的同时也分享给大家。</p>
+<p>顺手贴入原题地址：<a class="link"   target="_blank" rel="noopener" href="https://github.com/LeetCode-OpenSource/hire/blob/master/typescript_zh.md" >编写复杂TS类型<i class="fas fa-external-link-alt"></i></a></p>
+<h2 id="问题定义"><a href="#问题定义" class="headerlink" title="问题定义"></a>问题定义</h2><p>假设有一个叫 EffectModule 的类</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">EffectModule</span> &#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这个对象上的方法只可能有两种类型签名:</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> <span class="title class_">Action</span>&lt;T&gt; &#123;</span><br><span class="line">  payload?: T</span><br><span class="line">  <span class="attr">type</span>: <span class="built_in">string</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">asyncMethod&lt;T, U&gt;(<span class="attr">input</span>: <span class="title class_">Promise</span>&lt;T&gt;): <span class="title class_">Promise</span>&lt;<span class="title class_">Action</span>&lt;U&gt;&gt;</span><br><span class="line"></span><br><span class="line">syncMethod&lt;T, U&gt;(<span class="attr">action</span>: <span class="title class_">Action</span>&lt;T&gt;): <span class="title class_">Action</span>&lt;U&gt;</span><br></pre></td></tr></table></figure>
+
+<p>这个对象上还可能有一些任意的非函数属性：</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> <span class="title class_">Action</span>&lt;T&gt; &#123;</span><br><span class="line">  payload?: T;</span><br><span class="line">  <span class="attr">type</span>: <span class="built_in">string</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">EffectModule</span> &#123;</span><br><span class="line">  count = <span class="number">1</span>;</span><br><span class="line">  message = <span class="string">&quot;hello!&quot;</span>;</span><br><span class="line"></span><br><span class="line">  <span class="title function_">delay</span>(<span class="params">input: <span class="built_in">Promise</span>&lt;<span class="built_in">number</span>&gt;</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> input.<span class="title function_">then</span>(<span class="function"><span class="params">i</span> =&gt;</span> (&#123;</span><br><span class="line">      <span class="attr">payload</span>: <span class="string">`hello <span class="subst">$&#123;i&#125;</span>!`</span>,</span><br><span class="line">      <span class="attr">type</span>: <span class="string">&#x27;delay&#x27;</span></span><br><span class="line">    &#125;));</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="title function_">setMessage</span>(<span class="params">action: Action&lt;<span class="built_in">Date</span>&gt;</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      <span class="attr">payload</span>: action.<span class="property">payload</span>!.<span class="title function_">getMilliseconds</span>(),</span><br><span class="line">      <span class="attr">type</span>: <span class="string">&quot;set-message&quot;</span></span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>现在有一个叫 <code>connect</code> 的函数，它接受 <code>EffectModule</code> 实例，将它变成另一个对象，这个对象上只有<code>EffectModule</code> 的同名方法，但是方法的类型签名被改变了:</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">asyncMethod&lt;T, U&gt;(<span class="attr">input</span>: <span class="title class_">Promise</span>&lt;T&gt;): <span class="title class_">Promise</span>&lt;<span class="title class_">Action</span>&lt;U&gt;&gt;  变成了</span><br><span class="line">asyncMethod&lt;T, U&gt;(<span class="attr">input</span>: T): <span class="title class_">Action</span>&lt;U&gt; </span><br><span class="line">syncMethod&lt;T, U&gt;(<span class="attr">action</span>: <span class="title class_">Action</span>&lt;T&gt;): <span class="title class_">Action</span>&lt;U&gt;  变成了</span><br><span class="line">syncMethod&lt;T, U&gt;(<span class="attr">action</span>: T): <span class="title class_">Action</span>&lt;U&gt;</span><br></pre></td></tr></table></figure>
+
+<p>例子:</p>
+<p><code>EffectModule</code> 定义如下:</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> <span class="title class_">Action</span>&lt;T&gt; &#123;</span><br><span class="line">  payload?: T;</span><br><span class="line">  <span class="attr">type</span>: <span class="built_in">string</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">EffectModule</span> &#123;</span><br><span class="line">  count = <span class="number">1</span>;</span><br><span class="line">  message = <span class="string">&quot;hello!&quot;</span>;</span><br><span class="line"></span><br><span class="line">  <span class="title function_">delay</span>(<span class="params">input: <span class="built_in">Promise</span>&lt;<span class="built_in">number</span>&gt;</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> input.<span class="title function_">then</span>(<span class="function"><span class="params">i</span> =&gt;</span> (&#123;</span><br><span class="line">      <span class="attr">payload</span>: <span class="string">`hello <span class="subst">$&#123;i&#125;</span>!`</span>,</span><br><span class="line">      <span class="attr">type</span>: <span class="string">&#x27;delay&#x27;</span></span><br><span class="line">    &#125;));</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="title function_">setMessage</span>(<span class="params">action: Action&lt;<span class="built_in">Date</span>&gt;</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      <span class="attr">payload</span>: action.<span class="property">payload</span>!.<span class="title function_">getMilliseconds</span>(),</span><br><span class="line">      <span class="attr">type</span>: <span class="string">&quot;set-message&quot;</span></span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">connect 之后:</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> <span class="title class_">Connected</span> = &#123;</span><br><span class="line">  <span class="title function_">delay</span>(<span class="attr">input</span>: <span class="built_in">number</span>): <span class="title class_">Action</span>&lt;<span class="built_in">string</span>&gt;</span><br><span class="line">  <span class="title function_">setMessage</span>(<span class="attr">action</span>: <span class="title class_">Date</span>): <span class="title class_">Action</span>&lt;<span class="built_in">number</span>&gt;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> effectModule = <span class="keyword">new</span> <span class="title class_">EffectModule</span>()</span><br><span class="line"><span class="keyword">const</span> <span class="attr">connected</span>: <span class="title class_">Connected</span> = <span class="title function_">connect</span>(effectModule)</span><br></pre></td></tr></table></figure>
+
+<p>要求<br>在 题目链接 里面的 <code>index.ts</code> 文件中，有一个 <code>type Connect = (module: EffectModule) =&gt; any</code>，将 <code>any</code> 替换成题目的解答，让编译能够顺利通过，并且 <code>index.ts</code> 中 <code>connected</code> 的类型与:</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> <span class="title class_">Connected</span> = &#123;</span><br><span class="line">  <span class="title function_">delay</span>(<span class="attr">input</span>: <span class="built_in">number</span>): <span class="title class_">Action</span>&lt;<span class="built_in">string</span>&gt;;</span><br><span class="line">  <span class="title function_">setMessage</span>(<span class="attr">action</span>: <span class="title class_">Date</span>): <span class="title class_">Action</span>&lt;<span class="built_in">number</span>&gt;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>完全匹配。</p>
+<p>题目链接里的<code>index.ts</code>文件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">import &#123; expect &#125; from &quot;chai&quot;;</span><br><span class="line"></span><br><span class="line">interface Action&lt;T&gt; &#123;</span><br><span class="line">  payload?: T;</span><br><span class="line">  type: string;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class EffectModule &#123;</span><br><span class="line">  count = 1;</span><br><span class="line">  message = &quot;hello!&quot;;</span><br><span class="line"></span><br><span class="line">  delay(input: Promise&lt;number&gt;) &#123;</span><br><span class="line">    return input.then(i =&gt; (&#123;</span><br><span class="line">      payload: `hello $&#123;i&#125;!`,</span><br><span class="line">      type: &#x27;delay&#x27;</span><br><span class="line">    &#125;));</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  setMessage(action: Action&lt;Date&gt;) &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      payload: action.payload!.getMilliseconds(),</span><br><span class="line">      type: &quot;set-message&quot;</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 修改 Connect 的类型，让 connected 的类型变成预期的类型</span><br><span class="line">type Connect = (module: EffectModule) =&gt; any;</span><br><span class="line"></span><br><span class="line">const connect: Connect = m =&gt; (&#123;</span><br><span class="line">  delay: (input: number) =&gt; (&#123;</span><br><span class="line">    type: &#x27;delay&#x27;,</span><br><span class="line">    payload: `hello 2`</span><br><span class="line">  &#125;),</span><br><span class="line">  setMessage: (input: Date) =&gt; (&#123;</span><br><span class="line">    type: &quot;set-message&quot;,</span><br><span class="line">    payload: input.getMilliseconds()</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">type Connected = &#123;</span><br><span class="line">  delay(input: number): Action&lt;string&gt;;</span><br><span class="line">  setMessage(action: Date): Action&lt;number&gt;;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">export const connected: Connected = connect(new EffectModule());</span><br></pre></td></tr></table></figure>
+
+<h3 id="题目解析"><a href="#题目解析" class="headerlink" title="题目解析"></a>题目解析</h3><p>分析题目可知，我们需要做的就是将<strong>28行</strong>的<code>any</code>替换为我们自己解析出来的符合<code>Connected</code>的类型。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">any =&gt; &#123;</span><br><span class="line">  delay(input: number): Action&lt;string&gt;</span><br><span class="line">  setMessage(action: Date): Action&lt;number&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>当然我们不能把类型直接粘贴过去，还是要我们自己根据类型推断得出。</p>
+</blockquote>
+<h3 id="思路与解题过程"><a href="#思路与解题过程" class="headerlink" title="思路与解题过程"></a>思路与解题过程</h3><ol>
+<li>由于我们只想要获取类中的两个方法类型，所以我们需要去除<code>EffectModule</code>类中的<code>count</code>与<code>message</code>（或者更多的非<code>Function</code>）字段。</li>
+</ol>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> <span class="title class_">PickMethodNames</span>&lt;T&gt; = &#123;[P <span class="keyword">in</span> keyof T]: T[P] <span class="keyword">extends</span> <span class="title class_">Function</span> ? P : <span class="built_in">never</span>&#125;[keyof T];</span><br></pre></td></tr></table></figure>
+
+<p>这里就是对传递的泛型T进行遍历，如果值是继承自Function，则将该值设置为P，否则就是never，然后根据T的键获取值。</p>
+<p>传入EffectModule之后类型为<code>delay | setMessage</code><br><img src="https://pan.udolphin.com/files/image/2022/1/ba00390963369d165c18ecb226f81bd3.png" alt="image"></p>
+<ol start="2">
+<li>我们需要将<code>EffectModule</code>里方法的”旧“类型变为“新”类型。</li>
+</ol>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> asyncMethod&lt;T, U&gt; = <span class="function">(<span class="params">input: <span class="built_in">Promise</span>&lt;T&gt;</span>) =&gt;</span> <span class="title class_">Promise</span>&lt;<span class="title class_">Action</span>&lt;U&gt;&gt;;</span><br><span class="line"><span class="keyword">type</span> syncMethod&lt;T, U&gt; = <span class="function">(<span class="params">action: Action&lt;T&gt;</span>) =&gt;</span> <span class="title class_">Action</span>&lt;U&gt;;</span><br><span class="line"><span class="keyword">type</span> connectAsyncMethod&lt;T, U&gt; = <span class="function">(<span class="params">input: T</span>) =&gt;</span> <span class="title class_">Action</span>&lt;U&gt;;</span><br><span class="line"><span class="keyword">type</span> connectSyncMethod&lt;T, U&gt; = <span class="function">(<span class="params">action: T</span>) =&gt;</span> <span class="title class_">Action</span>&lt;U&gt;;</span><br></pre></td></tr></table></figure>
+
+<p>这里为了代码雅观提前声明好了四个类型，前两个<code>asyncMethod</code>与<code>syncMethod</code>我们称之为旧类型，<code>connectAsyncMethod</code>与<code>connectSyncMethod</code>两个类型为我们最终需要的类型，我们称之为新类型。</p>
+<p>最终题解：</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> <span class="title class_">Solution</span>&lt;T, U <span class="keyword">extends</span> keyof T = <span class="title class_">PickMethodNames</span>&lt;T&gt;&gt; = </span><br><span class="line">&#123; [P <span class="keyword">in</span> U]: T[P] <span class="keyword">extends</span> </span><br><span class="line">  asyncMethod&lt;infer O, infer B&gt; ? connectAsyncMethod&lt;O, B&gt; </span><br><span class="line">  : T[P] <span class="keyword">extends</span> syncMethod&lt;infer I, infer W&gt; ? connectSyncMethod&lt;I, W&gt; </span><br><span class="line">  : <span class="built_in">never</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> <span class="title class_">Connect</span> = <span class="function">(<span class="params"><span class="variable language_">module</span>: EffectModule</span>) =&gt;</span> <span class="title class_">Solution</span>&lt;<span class="title class_">EffectModule</span>&gt;;</span><br></pre></td></tr></table></figure>
+
+<p>在这里我们使用了<code>infer</code>关键字来推断类型。</p>
+<p>首先声明了两个泛型T和U并给U赋初始值PickMethodNames<T>，然后我们去遍历U（其实就是遍历<code>&quot;delay&quot; | &quot;setMessage&quot;</code>），接着根据类型判断是否继承自”旧“类型，这里用到了工具方法<code>infer</code>来推断并定义“旧“类型两个泛型的类型，并将其赋值给我们的”新“方法，这样就完成了从旧到新的转换，之后的逻辑同理可得，这里就不多赘述了。</p>
+<p>得到的类型：</p>
+<p><img src="https://pan.udolphin.com/files/image/2022/1/9a908474070663baf6b94a603ed56563.png" alt="image"></p>
+<blockquote>
+<p>注：这里为了得到最终类型将本来放置泛型的地方改为<code>EffectModule</code>（Vsode背锅）</p>
+</blockquote>
+<h3 id="全部代码如下："><a href="#全部代码如下：" class="headerlink" title="全部代码如下："></a>全部代码如下：</h3><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> <span class="title class_">Action</span>&lt;T&gt; &#123;</span><br><span class="line">  payload?: T;</span><br><span class="line">  <span class="attr">type</span>: <span class="built_in">string</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">EffectModule</span> &#123;</span><br><span class="line">  count = <span class="number">1</span>;</span><br><span class="line">  message = <span class="string">&quot;hello!&quot;</span>;</span><br><span class="line"></span><br><span class="line">  <span class="title function_">delay</span>(<span class="params">input: <span class="built_in">Promise</span>&lt;<span class="built_in">number</span>&gt;</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> input.<span class="title function_">then</span>(<span class="function"><span class="params">i</span> =&gt;</span> (&#123;</span><br><span class="line">      <span class="attr">payload</span>: <span class="string">`hello <span class="subst">$&#123;i&#125;</span>!`</span>,</span><br><span class="line">      <span class="attr">type</span>: <span class="string">&#x27;delay&#x27;</span></span><br><span class="line">    &#125;));</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="title function_">setMessage</span>(<span class="params">action: Action&lt;<span class="built_in">Date</span>&gt;</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      <span class="attr">payload</span>: action.<span class="property">payload</span>!.<span class="title function_">getMilliseconds</span>(),</span><br><span class="line">      <span class="attr">type</span>: <span class="string">&quot;set-message&quot;</span></span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> asyncMethod&lt;T, U&gt; = <span class="function">(<span class="params">input: <span class="built_in">Promise</span>&lt;T&gt;</span>) =&gt;</span> <span class="title class_">Promise</span>&lt;<span class="title class_">Action</span>&lt;U&gt;&gt;;</span><br><span class="line"><span class="keyword">type</span> syncMethod&lt;T, U&gt; = <span class="function">(<span class="params">action: Action&lt;T&gt;</span>) =&gt;</span> <span class="title class_">Action</span>&lt;U&gt;;</span><br><span class="line"><span class="keyword">type</span> connectAsyncMethod&lt;T, U&gt; = <span class="function">(<span class="params">input: T</span>) =&gt;</span> <span class="title class_">Action</span>&lt;U&gt;;</span><br><span class="line"><span class="keyword">type</span> connectSyncMethod&lt;T, U&gt; = <span class="function">(<span class="params">action: T</span>) =&gt;</span> <span class="title class_">Action</span>&lt;U&gt;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// -----------------------题解-------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> <span class="title class_">PickMethodNames</span>&lt;T&gt; = &#123;[P <span class="keyword">in</span> keyof T]: T[P] <span class="keyword">extends</span> <span class="title class_">Function</span> ? P : <span class="built_in">never</span>&#125;[keyof T];</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> <span class="title class_">Solution</span>&lt;T, U <span class="keyword">extends</span> keyof T = <span class="title class_">PickMethodNames</span>&lt;T&gt;&gt; = </span><br><span class="line">&#123; [P <span class="keyword">in</span> U]: T[P] <span class="keyword">extends</span> asyncMethod&lt;infer O, infer B&gt; ? connectAsyncMethod&lt;O, B&gt; : T[P] <span class="keyword">extends</span> syncMethod&lt;infer I, infer W&gt; ? connectSyncMethod&lt;I, W&gt; : <span class="built_in">never</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> <span class="title class_">Connect</span> = <span class="function">(<span class="params"><span class="variable language_">module</span>: EffectModule</span>) =&gt;</span> <span class="title class_">Solution</span>&lt;<span class="title class_">EffectModule</span>&gt;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// -----------------------题解-------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="attr">connect</span>: <span class="title class_">Connect</span> = <span class="function"><span class="params">m</span> =&gt;</span> (&#123;</span><br><span class="line">  <span class="attr">delay</span>: <span class="function">(<span class="params">input: <span class="built_in">number</span></span>) =&gt;</span> (&#123;</span><br><span class="line">    <span class="attr">type</span>: <span class="string">&#x27;delay&#x27;</span>,</span><br><span class="line">    <span class="attr">payload</span>: <span class="string">`hello 2`</span></span><br><span class="line">  &#125;),</span><br><span class="line">  <span class="attr">setMessage</span>: <span class="function">(<span class="params">input: <span class="built_in">Date</span></span>) =&gt;</span> (&#123;</span><br><span class="line">    <span class="attr">type</span>: <span class="string">&quot;set-message&quot;</span>,</span><br><span class="line">    <span class="attr">payload</span>: input.<span class="title function_">getMilliseconds</span>()</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> <span class="title class_">Connected</span> = &#123;</span><br><span class="line">  <span class="title function_">delay</span>(<span class="attr">input</span>: <span class="built_in">number</span>): <span class="title class_">Action</span>&lt;<span class="built_in">string</span>&gt;;</span><br><span class="line">  <span class="title function_">setMessage</span>(<span class="attr">action</span>: <span class="title class_">Date</span>): <span class="title class_">Action</span>&lt;<span class="built_in">number</span>&gt;;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> <span class="attr">connected</span>: <span class="title class_">Connected</span> = <span class="title function_">connect</span>(<span class="keyword">new</span> <span class="title class_">EffectModule</span>());</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+            </div>
+
+            
+
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                               rel="prev"
+                               href="/2023/06/28/%E6%B5%85%E8%B0%88%E7%A7%BB%E5%8A%A8%E7%AB%AF/"
+                            >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                                <span class="title flex-center">
+                                <span class="post-nav-title-item">浅谈移动端</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                            </a>
+                        </div>
+                    
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2020</span> -
+            
+            2023
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">Keep Team</a>
+            
+        </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+
+
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/post-helper.js"></script>
+
+        
+        
+    
+</div>
+
+
+
+</body>
+</html>
