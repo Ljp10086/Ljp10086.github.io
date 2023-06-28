@@ -8,7 +8,6 @@ title: 解析LeetCode开源的一道TypeScript类型编程问题
 
 顺手贴入原题地址：[编写复杂TS类型](https://github.com/LeetCode-OpenSource/hire/blob/master/typescript_zh.md)
 
-
 ## 问题定义
 
 假设有一个叫 EffectModule 的类
