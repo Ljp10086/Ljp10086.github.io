@@ -1,5 +1,6 @@
 ---
 title: TypeScript类型编程
+comments: true
 ---
 
 ## TypeScript的类型系统
