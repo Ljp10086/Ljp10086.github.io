@@ -87,7 +87,7 @@ comment:
   enable: true
   use: waline
   waline:
-    server_url: https://blog-waline-eal3admhw-ljp10086.vercel.app/
+    server_url: https://comments.lljmpf.top/
     reaction: true
     version: 2
 
