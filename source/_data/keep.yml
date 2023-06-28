@@ -34,7 +34,6 @@ menu:
 
 social_contact:
   enable: true
-  icp: 京ICP备2022015595号-1
   links:
     github: https://github.com/Ljp10086
     weixin: img | /images/wechat.jpeg
@@ -107,7 +106,7 @@ pjax:
 
 footer:
   since: 2021
-  icp:
+  icp: 京ICP备2022015595号-1
   site_deploy:
     enable: true
     provider: github
