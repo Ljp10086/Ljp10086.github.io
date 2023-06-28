@@ -1,5 +1,7 @@
 ---
 title: 解析LeetCode开源的一道TypeScript类型编程问题
+tags: 
+- TypeScript
 ---
 
 ## 前言

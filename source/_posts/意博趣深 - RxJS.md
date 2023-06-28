@@ -1,5 +1,7 @@
 ---
 title: 意博趣深 - RxJS
+tags:
+- RxJS
 ---
 
 ## **认识RxJS**
