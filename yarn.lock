@@ -1612,10 +1612,10 @@ hexo-server@^3.0.0:
     picocolors "^1.0.0"
     serve-static "^1.14.1"
 
-hexo-theme-keep@^3.6.1:
-  version "3.6.1"
-  resolved "https://registry.npmmirror.com/hexo-theme-keep/-/hexo-theme-keep-3.6.1.tgz"
-  integrity sha512-nf3PeojLfxSZddwNT2zJfpFKR+kLFBvaCI/14rsqucqBibDID7we7xvrQBcAglSTSm9LSz7ohs4JCzFCbdmPxA==
+hexo-theme-keep@^3.7.5:
+  version "3.7.5"
+  resolved "https://registry.yarnpkg.com/hexo-theme-keep/-/hexo-theme-keep-3.7.5.tgz#a36af1f2b656d9ca30215abe81591dac5c845626"
+  integrity sha512-aFqmtV2U7C7gmAzleIQ73O652tl3OM0Ue283WLO/ssjESdYkzEn4yxjVziVf3yWR5OHWHik9ejt/PGRYFBOz4A==
 
 hexo-util@^2.0.0, hexo-util@^2.5.0, hexo-util@^2.7.0:
   version "2.7.0"
